@@ -3842,31 +3842,20 @@ body:not(.light-theme) .pdf-viewer .doc-workspace {
         --shadow-sm: none !important;
         --shadow-md: none !important;
         --shadow-glow: none !important;
-
-        /* Print document overrides */
-        --doc-bg: #ffffff !important;
-        --doc-text: #201f1e !important;
-        --doc-word-header: #2b579a !important;
-        --doc-pdf-header: #000000 !important;
-        --doc-border: #cbd5e1 !important;
-        --doc-tree-bg: #f8fafc !important;
-        --doc-tree-folder: #1e3a8a !important;
-        --doc-tree-file: #475569 !important;
-        --doc-box-bg: #f3f2f1 !important;
     }
     
     body {
         background-color: #ffffff !important;
         color: #0f172a !important;
-        font-size: 11pt !important;
+        font-size: 10pt !important;
         overflow: visible !important;
+        background-image: none !important;
     }
     
-    /* Ẩn toàn bộ giao diện web chính */
+    /* Ẩn toàn bộ thanh điều hướng, nút tương tác, các bọt khí bay và toàn bộ MODAL */
     .navbar, .mobile-nav, .theme-toggle-btn, .slider-controls, .tab-btn, .dashboard-tabs, 
-    .lightbox-modal, .bg-blob, .particles, .hero, .about, .projects, .skills, .ai-ethics, 
-    .personal, .summary, .footer, .scroll-top-btn, .doc-modal-close-btn, .doc-toolbar,
-    .hero-scroll-indicator, .progress-container {
+    .lightbox-modal, .bg-blob, .particles, .scroll-top-btn, .doc-modal-close-btn, .doc-toolbar,
+    .hero-scroll-indicator, .doc-modal-overlay, .progress-container {
         display: none !important;
     }
     
@@ -3877,99 +3866,543 @@ body:not(.light-theme) .pdf-viewer .doc-workspace {
         max-width: 100% !important;
     }
     
-    /* Mở các modal sequential phẳng */
-    .doc-modal-overlay {
+    /* Ghi đè triệt để hiệu ứng ẩn hiện của thư viện AOS để hiển thị toàn văn khi in */
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        pointer-events: auto !important;
+        visibility: visible !important;
+    }
+
+    /* Hiển thị tuần tự các Section chính trên bản in */
+    .hero, .about, .projects, .skills, .ai-ethics, .personal, .summary, .footer {
         display: block !important;
-        position: relative !important;
-        z-index: auto !important;
+        opacity: 1 !important;
+        visibility: visible !important;
         background: transparent !important;
-        backdrop-filter: none !important;
-        padding: 0 !important;
-        overflow: visible !important;
+        color: #0f172a !important;
+        padding: 2rem 0 !important;
+        page-break-after: auto !important;
+    }
+
+    /* Phân trang hợp lý: các mục lớn bắt đầu ở đầu trang mới */
+    .about, .projects, .skills, .ai-ethics, .personal, .summary {
         page-break-before: always !important;
     }
-    
-    .doc-modal-overlay:first-of-type {
-        page-break-before: avoid !important;
+
+    /* Định dạng in ấn cho phần Trang chủ (Hero) */
+    .hero-grid {
+        display: grid !important;
+        grid-template-columns: 1.2fr 0.8fr !important;
+        gap: 2rem !important;
+        align-items: center !important;
+        page-break-inside: avoid !important;
     }
-    
-    .doc-modal-container {
-        display: block !important;
-        position: relative !important;
-        background: transparent !important;
-        border: none !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        max-height: none !important;
-        overflow: visible !important;
+
+    .avatar-ring, .avatar-badge {
+        display: none !important;
+    }
+
+    .avatar-frame {
         transform: none !important;
         animation: none !important;
-    }
-    
-    .doc-modal-container .doc-viewer {
-        border: none !important;
         box-shadow: none !important;
-        overflow: visible !important;
-        display: block !important;
-        max-height: none !important;
+        border: 3px solid #cbd5e1 !important;
+        width: 180px !important;
+        height: 180px !important;
+        margin: 0 auto !important;
     }
-    
-    .doc-modal-container .doc-workspace {
-        padding: 0 !important;
-        background: transparent !important;
-        max-height: none !important;
-        overflow: visible !important;
-        display: block !important;
+
+    .avatar-img {
+        border-radius: 50% !important;
     }
-    
-    .doc-page {
+
+    .section-title {
+        background: none !important;
+        -webkit-text-fill-color: initial !important;
+        color: #1a0f30 !important;
+        text-shadow: none !important;
+        font-size: 20pt !important;
+        margin-bottom: 1rem !important;
+        border-bottom: 2px solid #8b5cf6 !important;
+        padding-bottom: 0.5rem !important;
+    }
+
+    .section-badge {
+        background: #f1f5f9 !important;
+        color: #8b5cf6 !important;
+        border: 1px solid #cbd5e1 !important;
+        padding: 0.2rem 0.5rem !important;
+        border-radius: 4px !important;
+        font-size: 8.5pt !important;
+    }
+
+    .hero-greeting {
+        font-size: 14pt !important;
+        color: #8b5cf6 !important;
+    }
+
+    .hero-student-info {
+        background: #f8fafc !important;
+        border: 1px solid #cbd5e1 !important;
+        border-radius: 6px !important;
+        padding: 1rem !important;
+        margin-top: 1rem !important;
+    }
+
+    .hero-student-info .info-item {
+        color: #334155 !important;
+        font-size: 9.5pt !important;
+        margin-bottom: 0.25rem !important;
+    }
+
+    .hero-social, .hero-actions {
+        display: flex !important;
+        gap: 0.5rem !important;
+        margin-top: 1rem !important;
+    }
+
+    .hero-social a, .btn-primary, .btn-secondary {
+        background: #f1f5f9 !important;
+        color: #0f172a !important;
+        border: 1px solid #cbd5e1 !important;
         box-shadow: none !important;
-        padding: 0 !important;
-        border: none !important;
-        max-width: 100% !important;
-        min-height: auto !important;
+        text-shadow: none !important;
+        font-size: 8.5pt !important;
+        padding: 0.5rem 1rem !important;
+        border-radius: 4px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 0.25rem !important;
+        text-decoration: none !important;
     }
-    
-    /* Bố cục in ấn */
-    .hero-grid, .task-intro-grid, .prompt-compare-grid, .infographic-grid, .principles-grid, .reflection-grid {
-        grid-template-columns: 1fr !important;
+
+    /* Hiển thị chỉ số học thuật */
+    .hero-metrics {
+        display: flex !important;
+        justify-content: space-between !important;
+        background: #f8fafc !important;
+        border: 1px solid #cbd5e1 !important;
+        border-radius: 6px !important;
+        padding: 1rem !important;
+        margin-top: 1.5rem !important;
+        page-break-inside: avoid !important;
+    }
+
+    .metric-item {
+        text-align: center !important;
+    }
+
+    .metric-val {
+        font-size: 18pt !important;
+        font-weight: 700 !important;
+        color: #8b5cf6 !important;
+    }
+
+    .metric-label {
+        font-size: 8pt !important;
+        color: #475569 !important;
+    }
+
+    /* Định dạng in ấn cho phần Về tôi (About Me) */
+    .about-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
         gap: 1.5rem !important;
     }
-    
-    .slide-content-area {
-        grid-template-columns: 1fr !important;
+
+    .about-card {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        color: #0f172a !important;
+        transform: none !important;
+        page-break-inside: avoid !important;
+        padding: 1.5rem !important;
+        border-radius: 6px !important;
+    }
+
+    .about-card__title {
+        color: #1a0f30 !important;
+        font-size: 13pt !important;
+        margin-bottom: 1rem !important;
+        border-bottom: 1px solid #cbd5e1 !important;
+        padding-bottom: 0.25rem !important;
+    }
+
+    .about-info-row {
+        margin-bottom: 0.5rem !important;
+        font-size: 9.5pt !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        border-bottom: 1px dashed #e2e8f0 !important;
+        padding-bottom: 0.25rem !important;
+    }
+
+    .about-info-label {
+        color: #475569 !important;
+    }
+
+    .about-info-value {
+        color: #0f172a !important;
+        font-weight: 600 !important;
+    }
+
+    .about-bio {
+        color: #334155 !important;
+        font-size: 9.5pt !important;
+        line-height: 1.5 !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    .about-quote {
+        background: #f8fafc !important;
+        border-left: 3px solid #8b5cf6 !important;
+        padding: 0.5rem 1rem !important;
+        font-style: italic !important;
+        font-size: 9pt !important;
+        color: #475569 !important;
+    }
+
+    .about-goals li {
+        font-size: 9.5pt !important;
+        color: #334155 !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .about-direction-item {
+        display: flex !important;
+        gap: 0.75rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    .about-direction-title {
+        font-weight: 700 !important;
+        font-size: 9.5pt !important;
+        color: #1a0f30 !important;
+    }
+
+    .about-direction-desc {
+        font-size: 8.5pt !important;
+        color: #475569 !important;
+    }
+
+    /* Định dạng in ấn cho lưới thẻ Bài tập (Projects) */
+    .projects-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .project-card {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        color: #0f172a !important;
+        transform: none !important;
+        page-break-inside: avoid !important;
+        padding: 1.5rem !important;
+        border-radius: 6px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+    }
+
+    .card-title {
+        color: #1a0f30 !important;
+        font-size: 12pt !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .card-description {
+        color: #475569 !important;
+        font-size: 9pt !important;
+        line-height: 1.4 !important;
+        margin-bottom: 1rem !important;
+        flex-grow: 1 !important;
+    }
+
+    .card-tags {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 0.25rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .tag {
+        background: #f1f5f9 !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #475569 !important;
+        font-size: 8pt !important;
+        padding: 0.1rem 0.4rem !important;
+        border-radius: 3px !important;
+    }
+
+    .card-footer {
+        border-top: 1px solid #cbd5e1 !important;
+        padding-top: 0.75rem !important;
+        display: flex !important;
+        gap: 0.5rem !important;
+    }
+
+    .btn-card {
+        background: #f1f5f9 !important;
+        color: #0f172a !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        font-size: 8pt !important;
+        padding: 0.4rem 0.75rem !important;
+        border-radius: 4px !important;
+        text-decoration: none !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 0.25rem !important;
+    }
+
+    .btn-card--outline {
+        background: transparent !important;
+    }
+
+    .btn-canva {
+        background: #f1f5f9 !important;
+        color: #0f172a !important;
+        border: 1px solid #cbd5e1 !important;
+        font-size: 8pt !important;
+        padding: 0.4rem 0.75rem !important;
+        border-radius: 4px !important;
+        text-decoration: none !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 0.25rem !important;
+    }
+
+    /* Định dạng in ấn cho Ma trận năng lực (Skills) */
+    .skill-matrix {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
         gap: 1rem !important;
+    }
+
+    .skill-matrix__col {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        border-radius: 6px !important;
+        overflow: hidden !important;
         page-break-inside: avoid !important;
     }
-    
-    .slide-image-side {
-        max-height: 250px !important;
+
+    .skill-matrix__header {
+        background: #f1f5f9 !important;
+        border-bottom: 1px solid #cbd5e1 !important;
+        color: #0f172a !important;
+        padding: 0.75rem 1rem !important;
     }
-    
-    .tools-badge-grid {
-        grid-template-columns: repeat(4, 1fr) !important;
+
+    .skill-matrix__header h3 {
+        color: #1a0f30 !important;
+        font-size: 11pt !important;
+        margin: 0 !important;
     }
-    
-    .deck-slides-grid {
+
+    .skill-matrix__body {
+        padding: 1rem !important;
+    }
+
+    .skill-item {
+        margin-bottom: 0.75rem !important;
+    }
+
+    .skill-item span {
+        color: #334155 !important;
+        font-size: 9pt !important;
+        display: block !important;
+        margin-bottom: 0.25rem !important;
+    }
+
+    .skill-bar {
+        background: #e2e8f0 !important;
+        height: 6px !important;
+        border-radius: 3px !important;
+        overflow: hidden !important;
+    }
+
+    .skill-progress {
+        background: #8b5cf6 !important;
+        height: 100% !important;
+    }
+
+    /* Định dạng in ấn cho phần Đạo đức AI (AI Ethics) */
+    .ethics-grid {
+        display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1rem !important;
     }
-    
-    .timeline-image-grid {
-        grid-template-columns: repeat(3, 1fr) !important;
-    }
-    
-    /* Thiết lập ngắt trang hợp lý */
-    h1, h2, h3 {
-        page-break-after: avoid !important;
-    }
-    
-    .sources-table-wrapper {
+
+    .ethics-card {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        color: #0f172a !important;
+        padding: 1.5rem !important;
+        border-radius: 6px !important;
+        transform: none !important;
         page-break-inside: avoid !important;
     }
-    
-    .prompt-task-box {
+
+    .ethics-card__title {
+        color: #1a0f30 !important;
+        font-size: 12pt !important;
+        margin-bottom: 0.25rem !important;
+    }
+
+    .ethics-card__subtitle {
+        color: #8b5cf6 !important;
+        font-size: 8.5pt !important;
+        font-weight: 600 !important;
+        margin-bottom: 0.75rem !important;
+        text-transform: uppercase !important;
+    }
+
+    .ethics-card__desc {
+        color: #475569 !important;
+        font-size: 9pt !important;
+        line-height: 1.4 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .ethics-tag {
+        background: #f1f5f9 !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #475569 !important;
+        font-size: 7.5pt !important;
+        padding: 0.15rem 0.4rem !important;
+        border-radius: 3px !important;
+        display: inline-block !important;
+        margin-right: 0.25rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+
+    /* Định dạng in ấn cho phần Dự án cá nhân (Personal Project) */
+    .personal-card {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        color: #0f172a !important;
+        padding: 2rem !important;
+        border-radius: 6px !important;
         page-break-inside: avoid !important;
+    }
+
+    .personal-card__title {
+        color: #1a0f30 !important;
+        font-size: 15pt !important;
+    }
+
+    .personal-card__subtitle {
+        color: #8b5cf6 !important;
+        font-size: 11pt !important;
+        margin-bottom: 0.75rem !important;
+        display: block !important;
+    }
+
+    .personal-card__description {
+        color: #334155 !important;
+        font-size: 9.5pt !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1.25rem !important;
+    }
+
+    .personal-card__tag {
+        background: #f1f5f9 !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #8b5cf6 !important;
+        font-size: 8pt !important;
+        padding: 0.2rem 0.5rem !important;
+        border-radius: 4px !important;
+        display: inline-block !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .personal-card__status {
+        color: #10b981 !important;
+        font-size: 8.5pt !important;
+        font-weight: 600 !important;
+    }
+
+    .personal-card__features li {
+        color: #334155 !important;
+        font-size: 9pt !important;
+        margin-bottom: 0.35rem !important;
+    }
+
+    .btn-personal {
+        background: #f1f5f9 !important;
+        color: #0f172a !important;
+        border: 1px solid #cbd5e1 !important;
+        font-size: 8.5pt !important;
+        padding: 0.5rem 1rem !important;
+        border-radius: 4px !important;
+        text-decoration: none !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 0.25rem !important;
+    }
+
+    /* Định dạng in ấn cho phần Tổng kết (Summary & Timeline) */
+    .summary-grid {
+        display: grid !important;
+        grid-template-columns: 1.2fr 0.8fr !important;
+        gap: 2rem !important;
+        page-break-inside: avoid !important;
+    }
+
+    .summary-card {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        color: #0f172a !important;
+        padding: 1.5rem !important;
+        border-radius: 6px !important;
+    }
+
+    .summary-timeline {
+        border-left: 2px solid #cbd5e1 !important;
+        padding-left: 1rem !important;
+        margin-top: 1rem !important;
+    }
+
+    .summary-timeline-dot {
+        background: #8b5cf6 !important;
+        width: 8px !important;
+        height: 8px !important;
+        left: -5px !important;
+    }
+
+    .summary-timeline-time {
+        color: #8b5cf6 !important;
+        font-size: 8.5pt !important;
+        font-weight: 700 !important;
+    }
+
+    .summary-metrics {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1rem !important;
+    }
+
+    /* Định dạng in ấn cho Chân trang (Footer) */
+    .footer {
+        border-top: 1px solid #cbd5e1 !important;
+        text-align: center !important;
+        padding: 1.5rem 0 !important;
+        font-size: 8.5pt !important;
+        color: #64748b !important;
+        page-break-inside: avoid !important;
+    }
+
+    .footer-socials {
+        display: none !important; /* Không cần icon MXH ở footer khi in */
     }
 }
