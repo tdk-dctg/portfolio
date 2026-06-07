@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>Trần Đăng Khoa | Digital Portfolio</title>
+    <meta name="description" content="Portfolio học thuật và hồ sơ năng lực số của Trần Đăng Khoa (MSSV: 25020226) - Sinh viên CNTT, Trường Đại học Công nghệ (UET) - ĐHQGHN.">
+    <meta name="author" content="Trần Đăng Khoa">
+
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- AOS (Animate On Scroll) Library CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Font Awesome 6 (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Main CSS stylesheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Global Floating Bubble Particles Background -->
+    <div class="particles" id="particles" aria-hidden="true"></div>
+
+    <!-- BACKGROUND BLOBS -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+
+    <!-- TOP NAVIGATION BAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Brand / Logo -->
+            <a href="#hero" class="nav-brand">
+                <img src="assets/avatar.png" alt="TĐK" class="nav-avatar">
+                <span>Trần Đăng Khoa</span>
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Trang chủ</a></li>
+                <li><a href="#about" class="nav-link">Về tôi</a></li>
+                <li><a href="#projects" class="nav-link">Môn học</a></li>
+                <li><a href="#skills" class="nav-link">Năng lực</a></li>
+                <li><a href="#ai-ethics" class="nav-link">Đạo đức AI</a></li>
+                <li><a href="#personal" class="nav-link">Dự án cá nhân</a></li>
+                <li><a href="#summary" class="nav-link">Tổng kết</a></li>
+                <!-- Theme Toggle inside Navbar -->
+                <li>
+                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Đổi giao diện" style="margin-left: 0.5rem;">
+                        <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor" style="width:16px; height:16px;"><path d="M12.3 22h-.1c-5.5 0-10-4.5-10-10 0-4.8 3.5-9 8.3-9.8.5-.1 1 .3.9.8-.1.5-.6.8-1.1.9-3.8.7-6.5 4-6.5 7.9 0 4.4 3.6 8 8 8 3.9 0 7.2-2.7 7.9-6.5.1-.5.4-1 .9-1.1.5-.1.9.4.8.9-.8 4.8-5 8.3-9.8 8.3z"/></svg>
+                        <svg class="sun-icon" viewBox="0 0 24 24" fill="currentColor" style="width:16px; height:16px; display:none;"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-12.37c-.39-.39-1.02-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06c.38-.38.38-1.02 0-1.41zM7.05 18.01c-.39-.39-1.02-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06c.38-.38.38-1.02 0-1.41z"/></svg>
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Mobile Hamburger Button -->
+            <button class="hamburger" id="hamburger" aria-label="Mở menu điều hướng" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MAIN APP WRAPPER -->
+    <main class="main-content" style="padding-top: 70px; max-width: 1200px; margin: 0 auto;">
+
+        <!-- SECTION 1: HERO (Trang chủ) -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <div class="hero-main-layout">
+                    <div class="hero-text-side" data-aos="fade-right" data-aos-duration="900">
+                        <!-- UET Student Badge -->
+                        <div class="hero-badge">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>UET — ĐHQGHN &nbsp;·&nbsp; MSV: 25020226 &nbsp;·&nbsp; Lớp: IT1 K70</span>
+                        </div>
+
+                        <!-- Main Title -->
+                        <h1 class="hero-title">
+                            Xin chào, tôi là
+                            <span class="hero-name">Trần Đăng Khoa</span>
+                        </h1>
+
+                        <!-- Tagline -->
+                        <p class="hero-tagline">
+                            <i class="fa-solid fa-quote-left"></i>
+                            Đam mê Lập trình Hệ thống, Phân tích Dữ liệu và Sáng tạo Công nghệ số Trách nhiệm.
+                            <i class="fa-solid fa-quote-right"></i>
+                        </p>
+
+                        <!-- Description -->
+                        <p class="hero-description">
+                            Sinh viên chuyên ngành <strong>Công nghệ thông tin</strong> tại Trường Đại học Công nghệ (UET) - Đại học Quốc gia Hà Nội. 
+                            Portfolio này lưu giữ kết quả thực nghiệm và sự trưởng thành của tôi qua môn học 
+                            <strong>Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</strong>.
+                        </p>
+
+                        <!-- Contacts info -->
+                        <div class="hero-contacts">
+                            <a href="mailto:25020226@vnu.edu.vn" class="hero-contact-item" title="Email sinh viên (UET)">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span>25020226@vnu.edu.vn</span>
+                            </a>
+                            <span class="hero-contact-divider" aria-hidden="true">·</span>
+                            <a href="mailto:khoatyhd@gmail.com" class="hero-contact-item" title="Email cá nhân">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>khoatyhd@gmail.com</span>
+                            </a>
+                            <span class="hero-contact-divider" aria-hidden="true">·</span>
+                            <a href="https://github.com/tdk-dctg" target="_blank" rel="noopener noreferrer" class="hero-contact-item">
+                                <i class="fa-brands fa-github"></i>
+                                <span>tdk-dctg</span>
+                            </a>
+                        </div>
+
+                        <!-- CTA Actions -->
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn--primary">
+                                <i class="fa-solid fa-folder-open"></i>
+                                Xem bài thực hành
+                            </a>
+                            <a href="#about" class="btn btn--outline">
+                                <i class="fa-solid fa-user"></i>
+                                Về tôi
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Avatar orbiting layout -->
+                    <div class="hero-image-side" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150">
+                        <div class="avatar-wrapper">
+                            <!-- Orbiting Badges -->
+                            <div class="avatar-badge avatar-badge--tl">
+                                <i class="fa-brands fa-java"></i>
+                                <span>Java</span>
+                            </div>
+                            <div class="avatar-badge avatar-badge--tr">
+                                <i class="fa-solid fa-robot"></i>
+                                <span>AI Dev</span>
+                            </div>
+                            <div class="avatar-badge avatar-badge--bl">
+                                <i class="fa-brands fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="avatar-badge avatar-badge--br">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <!-- Orbiting Rings -->
+                            <div class="avatar-ring avatar-ring--outer" aria-hidden="true"></div>
+                            <div class="avatar-ring avatar-ring--inner" aria-hidden="true"></div>
+                            <!-- Circular Avatar frame -->
+                            <div class="avatar-frame">
+                                <img src="assets/avatar.png" alt="Trần Đăng Khoa Avatar" class="avatar-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Metrics Counter Section (4 Columns) -->
+                <div class="hero-metrics" class="hero-metrics" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
+                    <div class="metric-item">
+                        <div class="metric-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div class="metric-info">
+                            <span class="metric-value" id="statTasks">0</span>
+                            <span class="metric-label">Nhiệm vụ số hóa</span>
+                        </div>
+                    </div>
+                    <div class="metric-divider" aria-hidden="true"></div>
+                    <div class="metric-item">
+                        <div class="metric-icon metric-icon--orange">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <div class="metric-info">
+                            <span class="metric-value">Canva</span>
+                            <span class="metric-label">Phát triển đa phương tiện</span>
+                        </div>
+                    </div>
+                    <div class="metric-divider" aria-hidden="true"></div>
+                    <div class="metric-item">
+                        <div class="metric-icon metric-icon--purple">
+                            <i class="fa-solid fa-gavel"></i>
+                        </div>
+                        <div class="metric-info">
+                            <span class="metric-value" style="font-size: 1.15rem;">Auction Sys</span>
+                            <span class="metric-label">Dự án cá nhân</span>
+                        </div>
+                    </div>
+                    <div class="metric-divider" aria-hidden="true"></div>
+                    <div class="metric-item">
+                        <div class="metric-icon metric-icon--cyan">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <div class="metric-info">
+                            <span class="metric-value"><span id="statPrompts">0</span>+</span>
+                            <span class="metric-label">Prompt AI tối ưu</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Scroll down indicator (Inspired by Đỗ Minh Trí) -->
+                <div class="hero-scroll-indicator" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <span class="scroll-text">Cuộn xuống khám phá</span>
+                    <div class="scroll-line-draw"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: ABOUT ME (Về tôi) -->
+        <section class="about" id="about">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                <span class="section-badge">Hồ sơ năng lực</span>
+                <h2 class="section-title">Về tôi</h2>
+                <p class="section-desc">Tìm hiểu thêm về thông tin cá nhân, định hướng và mục tiêu học tập của tôi tại UET.</p>
+            </div>
+
+            <div class="about-grid">
+                <!-- Thẻ 1: Thông tin cá nhân -->
+                <div class="about-card about-card--cyan" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
+                    <div class="about-card__icon-wrap">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+                    <h3 class="about-card__title">Thông tin cá nhân</h3>
+                    <div class="about-info-list">
+                        <div class="about-info-row">
+                            <span class="about-info-label"><i class="fa-solid fa-user"></i> Họ và tên</span>
+                            <span class="about-info-value about-info-value--accent">Trần Đăng Khoa</span>
+                        </div>
+                        <div class="about-info-row">
+                            <span class="about-info-label"><i class="fa-solid fa-id-badge"></i> Mã sinh viên</span>
+                            <span class="about-info-value">25020226</span>
+                        </div>
+                        <div class="about-info-row">
+                            <span class="about-info-label"><i class="fa-solid fa-calendar"></i> Ngày sinh</span>
+                            <span class="about-info-value">23/02/2007</span>
+                        </div>
+                        <div class="about-info-row">
+                            <span class="about-info-label"><i class="fa-solid fa-users"></i> Lớp</span>
+                            <span class="about-info-value">IT1 K70</span>
+                        </div>
+                        <div class="about-info-row">
+                            <span class="about-info-label"><i class="fa-solid fa-graduation-cap"></i> Chuyên ngành</span>
+                            <span class="about-info-value">Công nghệ thông tin (UET)</span>
+                        </div>
+                        <div class="about-info-row">
+                            <span class="about-info-label"><i class="fa-solid fa-heart"></i> Sở thích</span>
+                            <div class="about-info-value hobbies-list" style="justify-content: flex-end;">
+                                <span class="hobby-tag">💻 Code</span>
+                                <span class="hobby-tag">⚽ Bóng đá</span>
+                                <span class="hobby-tag">🎵 Nhạc</span>
+                                <span class="hobby-tag">🤖 AI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thẻ 2: Tiểu sử ngắn -->
+                <div class="about-card about-card--purple" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div class="about-card__icon-wrap about-card__icon-wrap--cyan">
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </div>
+                    <h3 class="about-card__title">Tiểu sử học thuật</h3>
+                    <p class="about-bio">
+                        Tôi hiện là sinh viên năm nhất ngành <strong>Công nghệ thông tin</strong> tại <strong>Đại học Công nghệ (UET) - ĐHQGHN</strong>. 
+                        Tôi đam mê tìm hiểu các nguyên lý cốt lõi của khoa học máy tính, lập trình hệ thống và khai thác sức mạnh của trí tuệ nhân tạo một cách hiệu quả để giải quyết các vấn đề kỹ thuật số thực tế.
+                    </p>
+                    <p class="about-bio">
+                        Portfolio này lưu trữ kết quả và sự đúc kết của tôi thông qua chuỗi bài tập thực nghiệm môn Nhập môn Công nghệ số, phản ánh nỗ lực chuẩn hóa kỹ năng số cá nhân.
+                    </p>
+                    <div class="about-quote">
+                        <i class="fa-solid fa-quote-left"></i>
+                        <p>"Công nghệ là phương tiện mạnh mẽ nhất để con người chuyển đổi ý tưởng thành hiện thực và kiến tạo giá trị xã hội."</p>
+                    </div>
+                </div>
+
+                <!-- Thẻ 3: Mục tiêu học tập -->
+                <div class="about-card about-card--pink" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+                    <div class="about-card__icon-wrap about-card__icon-wrap--orange">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="about-card__title">Mục tiêu học tập</h3>
+                    <ul class="about-goals">
+                        <li><i class="fa-solid fa-plus"></i> Nắm vững kiến trúc phần mềm, cấu trúc dữ liệu và giải thuật trong Java & Python.</li>
+                        <li><i class="fa-solid fa-plus"></i> Phát triển khả năng làm việc nhóm trực tuyến bằng các nền tảng Git, Slack, Trello một cách chuyên nghiệp.</li>
+                        <li><i class="fa-solid fa-plus"></i> Làm chủ kỹ thuật Prompt Engineering nâng cao (Few-shot, Chain-of-thought) hỗ trợ nghiên cứu.</li>
+                        <li><i class="fa-solid fa-plus"></i> Luôn rèn luyện đạo đức nghề nghiệp, tuân thủ nguyên tắc liêm chính học thuật trong kỷ nguyên AI.</li>
+                    </ul>
+                </div>
+
+                <!-- Thẻ 4: Định hướng phát triển -->
+                <div class="about-card about-card--green" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
+                    <div class="about-card__icon-wrap about-card__icon-wrap--green">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3 class="about-card__title">Định hướng phát triển</h3>
+                    <div class="about-directions">
+                        <div class="about-direction-item">
+                            <div class="about-direction-icon" style="color:#3b82f6; background:rgba(59,130,246,0.12)">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <div>
+                                <strong>Kỹ sư phát triển phần mềm (Software Developer)</strong>
+                                <p>Tập trung phát triển hệ thống Back-end phân tán hiệu năng cao bằng Java.</p>
+                            </div>
+                        </div>
+                        <div class="about-direction-item">
+                            <div class="about-direction-icon" style="color:#8b5cf6; background:rgba(139,92,246,0.12)">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <div>
+                                <strong>Nghiên cứu & Ứng dụng AI</strong>
+                                <p>Ứng dụng học máy và AI tạo sinh phục vụ tối ưu hóa quy trình nghiệp vụ phần mềm.</p>
+                            </div>
+                        </div>
+                        <div class="about-direction-item">
+                            <div class="about-direction-icon" style="color:#10b981; background:rgba(16,185,129,0.12)">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <div>
+                                <strong>Xây dựng dự án nguồn mở</strong>
+                                <p>Đóng góp xây dựng cộng đồng, chia sẻ tri thức công nghệ và liêm chính số.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: PROJECTS (Môn học) -->
+        <section class="projects" id="projects">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                <span class="section-badge">Kết quả thực hành</span>
+                <h2 class="section-title">Bài Tập Môn Học</h2>
+                <p class="section-desc">Tổng hợp 6 bài thực hành lớn được xây dựng dưới dạng các tài liệu giả lập Word/PDF chi tiết, tích hợp minh chứng cụ thể.</p>
+                
+                <!-- Premium Progress Bar (Inspired by Đậu Thu Thảo) -->
+                <div class="progress-container">
+                    <div class="progress-info">
+                        <span class="progress-text"><i class="fa-solid fa-circle-check" style="color: #10b981;"></i> Tiến độ hoàn thành bài thực hành</span>
+                        <span class="progress-percentage">100% (6/6 Bài nộp)</span>
+                    </div>
+                    <div class="progress-track-bar">
+                        <div class="progress-fill-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Card Bài 1 -->
+                <article class="project-card project-card--blue" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="card-header">
+                        <div class="card-icon card-icon--blue">
+                            <i class="fa-solid fa-computer"></i>
+                        </div>
+                        <span class="card-number">01</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Máy tính và thiết bị ngoại vi</h3>
+                        <div class="card-category-badge card-category-badge--blue">
+                            <i class="fa-solid fa-layer-group"></i> Tổ Chức Dữ Liệu
+                        </div>
+                        <p class="card-description">
+                            Thiết lập cây thư mục chuẩn hóa trên hệ thống để tối ưu hóa việc tổ chức dữ liệu cá nhân, tránh thất lạc tệp tin học thuật.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">Windows Explorer</span>
+                            <span class="tag">File Management</span>
+                        </div>
+                    </div>
+                    <div class="card-footer card-footer--two-btns">
+                        <button class="btn-card" data-open-modal="modalTask1">
+                            <i class="fa-solid fa-laptop-code"></i> Xem trên web
+                        </button>
+                        <a href="bai1_quan-ly-tep-thu-muc.docx" class="btn-card btn-card--outline" download title="Tải tệp Word gốc">
+                            <i class="fa-solid fa-download"></i> Bản gốc (.docx)
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card Bài 2 -->
+                <article class="project-card project-card--purple" data-aos="fade-up" data-aos-duration="700" data-aos-delay="80">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="card-header">
+                        <div class="card-icon card-icon--purple">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <span class="card-number">02</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Khai thác dữ liệu học thuật</h3>
+                        <div class="card-category-badge card-category-badge--purple">
+                            <i class="fa-solid fa-microscope"></i> Nghiên Cứu Học Thuật
+                        </div>
+                        <p class="card-description">
+                            Ứng dụng toán tử tìm kiếm nâng cao để chọn lọc 10 tài liệu khoa học uy tín, đánh giá tin cậy theo chuẩn Harvard.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">Academic Search</span>
+                            <span class="tag">Harvard Citation</span>
+                        </div>
+                    </div>
+                    <div class="card-footer card-footer--two-btns">
+                        <button class="btn-card" data-open-modal="modalTask2">
+                            <i class="fa-solid fa-laptop-code"></i> Xem trên web
+                        </button>
+                        <a href="bai2_tim-kiem-thong-tin.pdf" class="btn-card btn-card--outline" target="_blank" title="Xem hoặc tải tệp PDF gốc">
+                            <i class="fa-solid fa-file-pdf"></i> Bản gốc (.pdf)
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card Bài 3 -->
+                <article class="project-card project-card--cyan" data-aos="fade-up" data-aos-duration="700" data-aos-delay="160">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="card-header">
+                        <div class="card-icon card-icon--cyan">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <span class="card-number">03</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Xây dựng câu lệnh Prompt</h3>
+                        <div class="card-category-badge card-category-badge--cyan">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Tối Ưu Prompt
+                        </div>
+                        <p class="card-description">
+                            Thử nghiệm và đối sánh hiệu quả giữa các câu lệnh cơ bản và nâng cao (Few-shot, Chain-of-thought) phục vụ học tập.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">Prompt Engineering</span>
+                            <span class="tag">ChatGPT</span>
+                        </div>
+                    </div>
+                    <div class="card-footer card-footer--two-btns">
+                        <button class="btn-card" data-open-modal="modalTask3">
+                            <i class="fa-solid fa-laptop-code"></i> Xem trên web
+                        </button>
+                        <a href="bai3_viet-prompt-hieu-qua.docx" class="btn-card btn-card--outline" download title="Tải tệp Word gốc">
+                            <i class="fa-solid fa-download"></i> Bản gốc (.docx)
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card Bài 4 -->
+                <article class="project-card project-card--green" data-aos="fade-up" data-aos-duration="700" data-aos-delay="240">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="card-header">
+                        <div class="card-icon card-icon--green">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <span class="card-number">04</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Hợp tác trong không gian số</h3>
+                        <div class="card-category-badge card-category-badge--green">
+                            <i class="fa-solid fa-handshake"></i> Cộng Tác Trực Tuyến
+                        </div>
+                        <p class="card-description">
+                            Thiết lập hệ sinh thái công cụ số (Slack, Trello, Google Drive) để giải quyết các xung đột làm việc nhóm từ xa.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">Slack & Trello</span>
+                            <span class="tag">Drive Workspace</span>
+                        </div>
+                    </div>
+                    <div class="card-footer card-footer--two-btns">
+                        <button class="btn-card" data-open-modal="modalTask4">
+                            <i class="fa-solid fa-laptop-code"></i> Xem trên web
+                        </button>
+                        <a href="bai4_hop-tac-truc-tuyen.docx" class="btn-card btn-card--outline" download title="Tải tệp Word gốc">
+                            <i class="fa-solid fa-download"></i> Bản gốc (.docx)
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card Bài 5 -->
+                <article class="project-card project-card--orange project-card--canva" data-aos="fade-up" data-aos-duration="700" data-aos-delay="320">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="card-label">
+                        <i class="fa-solid fa-star"></i> Sản phẩm thiết kế
+                    </div>
+                    <div class="card-header">
+                        <div class="card-icon card-icon--orange">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <span class="card-number">05</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Sáng tạo nội dung đa phương tiện</h3>
+                        <div class="card-category-badge card-category-badge--orange">
+                            <i class="fa-solid fa-sparkles"></i> Nội Dung Sinh Tạo
+                        </div>
+                        <p class="card-description">
+                            Ứng dụng mô hình AI tạo sinh phác thảo ý tưởng bài thuyết trình và thiết kế slide chuyên nghiệp trên Canva.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">Canva Design</span>
+                            <span class="tag">Generative AI</span>
+                        </div>
+                    </div>
+                    <div class="card-footer card-footer--col">
+                        <div class="card-footer--two-btns" style="border-top:none; padding-top:0; margin-bottom:0.25rem; width: 100%;">
+                            <button class="btn-card" data-open-modal="modalTask5">
+                                <i class="fa-solid fa-laptop-code"></i> Xem trên web
+                            </button>
+                            <a href="bai5_sang-tao-noi-dung-AI.docx" class="btn-card btn-card--outline" download title="Tải tệp Word gốc">
+                                <i class="fa-solid fa-download"></i> Bản gốc (.docx)
+                            </a>
+                        </div>
+                        <div class="canva-btns">
+                            <a href="https://canva.link/m8ct7j0duriecfs" class="btn-canva" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-solid fa-palette"></i> Xem thiết kế Canva <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card Bài 6 -->
+                <article class="project-card project-card--red" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="card-header">
+                        <div class="card-icon card-icon--red">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <span class="card-number">06</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Đạo đức học thuật & trách nhiệm AI</h3>
+                        <div class="card-category-badge card-category-badge--red">
+                            <i class="fa-solid fa-scale-balanced"></i> Liêm Chính AI
+                        </div>
+                        <p class="card-description">
+                            Nghiên cứu chính sách sử dụng AI của UET và thiết lập bộ 6 nguyên tắc liêm chính học thuật cá nhân.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">AI Ethics</span>
+                            <span class="tag">Academic Integrity</span>
+                        </div>
+                    </div>
+                    <div class="card-footer card-footer--two-btns">
+                        <button class="btn-card" data-open-modal="modalTask6">
+                            <i class="fa-solid fa-laptop-code"></i> Xem trên web
+                        </button>
+                        <a href="bai6_AI-co-trach-nhiem.docx" class="btn-card btn-card--outline" download title="Tải tệp Word gốc">
+                            <i class="fa-solid fa-download"></i> Bản gốc (.docx)
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 4: SKILLS (Năng lực) -->
+        <section class="skills" id="skills">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                <span class="section-badge">Học thuật số</span>
+                <h2 class="section-title">Ma Trận Năng Lực</h2>
+                <p class="section-desc">Phân loại chi tiết các kỹ năng chuyên môn, công cụ và tư duy học tập của bản thân.</p>
+            </div>
+
+            <div class="skill-matrix">
+                <!-- Cột 1: Chuyên Môn Lập Trình -->
+                <div class="skill-matrix__col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="skill-matrix__header skill-matrix__header--blue">
+                        <div class="skill-matrix__icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3>Chuyên Môn Lập Trình</h3>
+                    </div>
+                    <div class="skill-matrix__body">
+                        <div class="skill-matrix__item">
+                            <div class="skill-matrix__item-icon" style="color:#ea580c; background:rgba(234,88,12,0.12);">
+                                <i class="fa-brands fa-java"></i>
+                            </div>
+                            <div class="skill-matrix__item-info">
+                                <span class="skill-matrix__item-name">Java OOP</span>
+                                <span class="skill-matrix__item-desc">Lập trình hướng đối tượng, xử lý đa luồng, xử lý ngoại lệ.</span>
+                            </div>
+                        </div>
+                        <div class="skill-matrix__item">
+                            <div class="skill-matrix__item-icon" style="color:#3b82f6; background:rgba(59,130,246,0.12);">
+                                <i class="fa-brands fa-python"></i>
+                            </div>
+                            <div class="skill-matrix__item-info">
+                                <span class="skill-matrix__item-name">Python Scripting</span>
+                                <span class="skill-matrix__item-desc">Tự động hóa tác vụ, phân tích số liệu, thu thập dữ liệu học thuật.</span>
+                            </div>
+                        </div>
+                        <div class="skill-matrix__item">
+                            <div class="skill-matrix__item-icon" style="color:#8b5cf6; background:rgba(139,92,246,0.12);">
+                                <i class="fa-solid fa-diagram-project"></i>
+                            </div>
+                            <div class="skill-matrix__item-info">
+                                <span class="skill-matrix__item-name">Cấu trúc dữ liệu & Thuật toán</span>
+                                <span class="skill-matrix__item-desc">Nền tảng tư duy giải thuật tối ưu hóa mã nguồn lập trình.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột 2: Nền Tảng & Công Cụ -->
+                <div class="skill-matrix__col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="skill-matrix__header skill-matrix__header--orange">
+                        <div class="skill-matrix__icon">
+                            <i class="fa-solid fa-toolbox"></i>
+                        </div>
+                        <h3>Nền Tảng & Công Cụ</h3>
+                    </div>
+                    <div class="skill-matrix__body">
+                        <div class="skill-matrix__item">
+                            <div class="skill-matrix__item-icon" style="color:#06b6d4; background:rgba(6,182,212,0.12);">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <div class="skill-matrix__item-info">
+                                <span class="skill-matrix__item-name">Generative AI</span>
+                                <span class="skill-matrix__item-desc">Kỹ thuật Prompt nâng cao (ChatGPT, Gemini) tối ưu hóa nghiên cứu.</span>
+                            </div>
+                        </div>
+                        <div class="skill-matrix__item">
+                            <div class="skill-matrix__item-icon" style="color:#f59e0b; background:rgba(245,158,11,0.12);">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+                            <div class="skill-matrix__item-info">
+                                <span class="skill-matrix__item-name">Canva & Design</span>
+                                <span class="skill-matrix__item-desc">Thiết kế đồ họa thông tin (infographics), slide báo cáo đa phương tiện.</span>
+                            </div>
+                        </div>
+                        <div class="skill-matrix__item">
+                            <div class="skill-matrix__item-icon" style="color:#f97316; background:rgba(249,115,22,0.12);">
+                                <i class="fa-brands fa-git-alt"></i>
+                            </div>
+                            <div class="skill-matrix__item-info">
+                                <span class="skill-matrix__item-name">Git & GitHub</span>
+                                <span class="skill-matrix__item-desc">Quản lý phiên bản mã nguồn và cộng tác trực tuyến nhóm.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột 3: Quản Trị & Tư Duy -->
+                <div class="skill-matrix__col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="skill-matrix__header skill-matrix__header--green">
+                        <div class="skill-matrix__icon">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3>Quản Trị & Tư Duy</h3>
+                    </div>
+                    <div class="skill-matrix__body">
+                        <div class="skill-matrix__item">
+                            <div class="skill-matrix__item-icon" style="color:#10b981; background:rgba(16,185,129,0.12);">
+                                <i class="fa-solid fa-sitemap"></i>
+                            </div>
+                            <div class="skill-matrix__item-info">
+                                <span class="skill-matrix__item-name">Tư duy Hệ thống</span>
+                                <span class="skill-matrix__item-desc">Tổ chức phân cấp dữ liệu lớn, xây dựng luồng kiến trúc hợp lý.</span>
+                            </div>
+                        </div>
+                        <div class="skill-matrix__item">
+                            <div class="skill-matrix__item-icon" style="color:#8b5cf6; background:rgba(139,92,246,0.12);">
+                                <i class="fa-solid fa-people-group"></i>
+                            </div>
+                            <div class="skill-matrix__item-info">
+                                <span class="skill-matrix__item-name">Phối hợp Nhóm</span>
+                                <span class="skill-matrix__item-desc">Làm việc nhóm theo mô hình Agile, điều phối tiến độ qua Trello/Slack.</span>
+                            </div>
+                        </div>
+                        <div class="skill-matrix__item">
+                            <div class="skill-matrix__item-icon" style="color:#ef4444; background:rgba(239,68,68,0.12);">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <div class="skill-matrix__item-info">
+                                <span class="skill-matrix__item-name">Đạo đức Không gian Số</span>
+                                <span class="skill-matrix__item-desc">Sử dụng AI có đạo đức, trích nguồn minh bạch, liêm chính học thuật.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: AI ETHICS (Đạo đức AI) -->
+        <section class="ai-ethics" id="ai-ethics">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                <span class="section-badge">Đạo đức số</span>
+                <h2 class="section-title">Nguyên Tắc Sử Dụng AI Trách Nhiệm</h2>
+                <p class="section-desc">Bộ 3 nguyên tắc cốt lõi định hướng cách tôi khai thác trí tuệ nhân tạo trong học thuật và lập trình.</p>
+            </div>
+
+            <div class="ethics-grid">
+                <!-- Card 1 -->
+                <div class="ethics-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="ethics-card__glow ethics-card__glow--blue" aria-hidden="true"></div>
+                    <div class="ethics-card__icon ethics-card__icon--blue">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <div class="ethics-card__number">01</div>
+                    <h3 class="ethics-card__title">Tư Duy Con Người Làm Chủ</h3>
+                    <p class="ethics-card__subtitle">Human-in-the-loop</p>
+                    <p class="ethics-card__desc">
+                        AI chỉ đóng vai trò là một trợ lý hỗ trợ tăng tốc, tư duy con người luôn trực tiếp định hướng, kiểm duyệt và chịu trách nhiệm cuối cùng cho mọi nội dung được đưa ra.
+                    </p>
+                    <div class="ethics-card__tags">
+                        <span class="ethics-tag">Human Control</span>
+                        <span class="ethics-tag">Critical Thinking</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="ethics-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="ethics-card__glow ethics-card__glow--purple" aria-hidden="true"></div>
+                    <div class="ethics-card__icon ethics-card__icon--purple">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <div class="ethics-card__number">02</div>
+                    <h3 class="ethics-card__title">Minh Bạch Nguồn Hỗ Trợ AI</h3>
+                    <p class="ethics-card__subtitle">Transparency</p>
+                    <p class="ethics-card__desc">
+                        Luôn công khai minh bạch mức độ can thiệp và phương pháp sử dụng công cụ AI tạo sinh trong mọi báo cáo học thuật, tôn trọng bản quyền sở hữu trí tuệ.
+                    </p>
+                    <div class="ethics-card__tags">
+                        <span class="ethics-tag">Honesty</span>
+                        <span class="ethics-tag">Attribution</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="ethics-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="ethics-card__glow ethics-card__glow--green" aria-hidden="true"></div>
+                    <div class="ethics-card__icon ethics-card__icon--green">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="ethics-card__number">03</div>
+                    <h3 class="ethics-card__title">Xác Thực Dữ Liệu Đa Chiều</h3>
+                    <p class="ethics-card__subtitle">Verification</p>
+                    <p class="ethics-card__desc">
+                        Không mặc định tin tưởng tuyệt đối vào kết quả trả về của mô hình AI. Mọi dữ liệu nghiên cứu phải được đối chiếu và xác thực chéo với các nguồn học thuật chính thống.
+                    </p>
+                    <div class="ethics-card__tags">
+                        <span class="ethics-tag">Fact-Checking</span>
+                        <span class="ethics-tag">Science Sources</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: PERSONAL PROJECTS (Dự án cá nhân) -->
+        <section class="personal" id="personal">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                <span class="section-badge">Dự án bên ngoài</span>
+                <h2 class="section-title">Dự Án Cá Nhân Nổi Bật</h2>
+                <p class="section-desc">Giới thiệu dự án phần mềm do tôi độc lập phát triển nhằm rèn luyện kiến thức kỹ thuật lập trình.</p>
+            </div>
+
+            <div class="personal-grid">
+                <!-- Auction System Card -->
+                <article class="personal-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="personal-card__glow" aria-hidden="true"></div>
+
+                    <div class="personal-card__header">
+                        <div class="personal-card__icon">
+                            <i class="fa-solid fa-gavel"></i>
+                        </div>
+                        <div class="personal-card__meta">
+                            <span class="personal-card__tag">Back-end / OOP</span>
+                            <span class="personal-card__status">
+                                <i class="fa-solid fa-circle" style="color:var(--accent-emerald);"></i> Active Development
+                            </span>
+                        </div>
+                    </div>
+
+                    <h3 class="personal-card__title">
+                        Auction System
+                        <span class="personal-card__subtitle">— Hệ thống đấu giá trực tuyến</span>
+                    </h3>
+
+                    <p class="personal-card__description">
+                        Thiết kế và hiện thực hóa hệ thống back-end quản lý phiên đấu giá trực tuyến theo thời gian thực. Dự án ứng dụng chuyên sâu mô hình lập trình 
+                        <strong>hướng đối tượng (OOP)</strong> kết hợp xử lý <strong>đa luồng (Multi-threading)</strong> để điều phối đồng thời hàng trăm người dùng tham gia đấu giá trực tiếp, 
+                        và xây dựng cơ chế <strong>xử lý ngoại lệ (Exception Handling)</strong> nghiêm ngặt chống xung đột dữ liệu phiên.
+                    </p>
+
+                    <div class="personal-card__stack">
+                        <span class="stack-item stack-item--java">
+                            <i class="fa-brands fa-java"></i> Java OOP
+                        </span>
+                        <span class="stack-item stack-item--thread">
+                            <i class="fa-solid fa-microchip"></i> Multi-threading
+                        </span>
+                        <span class="stack-item stack-item--exc">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Exception Handling
+                        </span>
+                        <span class="stack-item stack-item--oop">
+                            <i class="fa-solid fa-cubes"></i> Concurrency Control
+                        </span>
+                    </div>
+
+                    <ul class="personal-card__features">
+                        <li><i class="fa-solid fa-check-circle"></i> Đồng bộ hóa luồng (Thread Synchronization) ngăn chặn điều kiện tranh chấp (Race Condition).</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Cơ sở dữ liệu ảo mô phỏng thời gian thực quản lý danh mục và lịch sử trả giá của khách hàng.</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Tối ưu hóa bộ nhớ RAM và CPU thông qua cấu hình Thread Pool hợp lý.</li>
+                    </ul>
+
+                    <div class="personal-card__footer">
+                        <a href="https://github.com/teendangor07hd/Auction-System" class="btn-personal" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i> Xem trên GitHub <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left:0.5rem;"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 7: SUMMARY (Tổng kết) -->
+        <section class="summary" id="summary">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                <span class="section-badge">Hành trình</span>
+                <h2 class="section-title">Tổng Kết Cuối Kỳ</h2>
+                <p class="section-desc">Những trải nghiệm thực tế, thử thách đã vượt qua và lời cam kết liêm chính học thuật.</p>
+            </div>
+
+            <div class="summary-row">
+                <!-- Trái: Trải nghiệm & Timeline -->
+                <div class="summary-card summary-card--wide" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="summary-card__header">
+                        <div class="summary-card__icon">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <h3>Trải nghiệm và sự trưởng thành</h3>
+                    </div>
+                    <p class="summary-text">
+                        Khi bắt đầu môn học, tôi tiếp cận công nghệ số phần nhiều bằng bản năng sử dụng hàng ngày. 
+                        Tuy nhiên, việc trải qua 6 bài thực hành đã định hình lại tư duy của tôi: từ cách quản trị tệp tin khoa học đến việc làm việc nhóm chuyên nghiệp theo quy trình, tất cả giúp tôi hoạt động có tổ chức và hiệu quả hơn rất nhiều.
+                    </p>
+                    <p class="summary-text">
+                        Bài học lớn nhất đối với tôi là việc thấu hiểu ranh giới trách nhiệm khi dùng AI: <em>AI tạo sinh là trợ lý hữu dụng, nhưng chính bộ não con người mới quyết định chiều sâu học thuật của bài viết.</em>
+                    </p>
+
+                    <!-- Timeline -->
+                    <div class="summary-timeline">
+                        <div class="summary-timeline__item">
+                            <div class="summary-timeline__dot"></div>
+                            <div>
+                                <strong>Giai đoạn đầu (Tuần 1 - 3)</strong>
+                                <p>Chuẩn hóa lại nền tảng máy tính cơ bản, thiết lập cấu trúc cây thư mục logic phục vụ lưu trữ lâu dài.</p>
+                            </div>
+                        </div>
+                        <div class="summary-timeline__item">
+                            <div class="summary-timeline__dot summary-timeline__dot--mid"></div>
+                            <div>
+                                <strong>Giai đoạn giữa (Tuần 4 - 6)</strong>
+                                <p>Thực hành hợp tác nhóm trực tuyến trên Slack/Trello; làm chủ kỹ thuật Prompt Engineering phục vụ nghiên cứu.</p>
+                            </div>
+                        </div>
+                        <div class="summary-timeline__item">
+                            <div class="summary-timeline__dot summary-timeline__dot--end"></div>
+                            <div>
+                                <strong>Giai đoạn cuối (Tuần 7 - 9)</strong>
+                                <p>Hoàn thành bộ nguyên tắc đạo đức sử dụng AI trách nhiệm, tổng hợp năng lực số xây dựng portfolio hoàn chỉnh.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phải: Tâm đắc & Thách thức -->
+                <div class="summary-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="summary-card__header">
+                        <div class="summary-card__icon" style="background:rgba(245,158,11,0.15);color:#f59e0b">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3>Tâm Đắc & Thách Thức</h3>
+                    </div>
+
+                    <p class="summary-section-label"><i class="fa-solid fa-heart" style="color:#ef4444"></i> Điểm tôi tâm đắc nhất</p>
+                    <div class="summary-highlights">
+                        <div class="summary-highlight-item">
+                            <i class="fa-solid fa-diamond" style="color:#8b5cf6"></i>
+                            <div><strong>Rèn luyện Prompt Engineering:</strong> Việc hiểu cơ chế Chain-of-thought và Few-shot giúp tôi nâng hiệu quả tương tác với ChatGPT lên một tầm cao mới.</div>
+                        </div>
+                        <div class="summary-highlight-item">
+                            <i class="fa-solid fa-diamond" style="color:#8b5cf6"></i>
+                            <div><strong>Bản đồ thư mục & Version Control:</strong> Giúp tối ưu hóa tốc độ tìm kiếm tài nguyên và kiểm soát tiến độ làm việc nhóm không bị trôi thông tin.</div>
+                        </div>
+                    </div>
+
+                    <p class="summary-section-label" style="margin-top:1.5rem"><i class="fa-solid fa-hand-fist" style="color:#f59e0b"></i> Thách thức đã vượt qua</p>
+                    <div class="summary-challenges">
+                        <div class="summary-challenge-item">
+                            <i class="fa-solid fa-diamond" style="color:#f59e0b"></i>
+                            <div><strong>Race Condition trong Auction System:</strong> Lập trình đa luồng gặp lỗi tranh chấp dữ liệu phiên đấu giá. Đã khắc phục thành công bằng khóa đồng bộ hóa dữ liệu.</div>
+                        </div>
+                        <div class="summary-challenge-item">
+                            <i class="fa-solid fa-diamond" style="color:#f59e0b"></i>
+                            <div><strong>Kiểm chứng ảo tưởng AI (Hallucination):</strong> Tập thói quen đối chiếu chéo thông tin số với tài liệu gốc trên Google Scholar để xác minh tính chuẩn xác.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary-row" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                <!-- Kiến thức thu nhận -->
+                <div class="summary-card summary-card--wide">
+                    <div class="summary-card__header">
+                        <div class="summary-card__icon" style="background:rgba(139,92,246,0.15);color:#8b5cf6">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3>Kỹ năng & Kiến thức thu nhận</h3>
+                    </div>
+                    <div class="summary-skills-tags">
+                        <span class="summary-skill-tag"><i class="fa-solid fa-folder"></i> Quản lý tệp & thư mục số</span>
+                        <span class="summary-skill-tag"><i class="fa-solid fa-magnifying-glass"></i> Khai thác thông tin học thuật</span>
+                        <span class="summary-skill-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Prompt Engineering tối ưu</span>
+                        <span class="summary-skill-tag"><i class="fa-brands fa-github"></i> Làm việc nhóm trực tuyến qua Git</span>
+                        <span class="summary-skill-tag"><i class="fa-solid fa-palette"></i> Thiết kế Canvas đa phương tiện</span>
+                        <span class="summary-skill-tag"><i class="fa-solid fa-scale-balanced"></i> Đạo đức AI & Liêm chính số</span>
+                        <span class="summary-skill-tag"><i class="fa-solid fa-code"></i> Lập trình Java & Python hệ thống</span>
+                        <span class="summary-skill-tag"><i class="fa-solid fa-globe"></i> Thiết kế Website Portfolio hiện đại</span>
+                    </div>
+                    <p class="summary-text" style="margin-top:1.5rem">
+                        Những hành trang tri thức số và tư duy phản biện khoa học này sẽ được tôi áp dụng xuyên suốt chặng đường nghiên cứu chuyên ngành Công nghệ thông tin tại UET, hỗ trợ đắc lực cho các bài tập lớn, nghiên cứu khoa học sinh viên và luận văn tốt nghiệp trong tương lai.
+                    </p>
+                </div>
+
+                <!-- Lời kết -->
+                <div class="summary-card summary-card--closing">
+                    <div class="summary-closing-icon" aria-hidden="true">🎓</div>
+                    <h3 class="summary-closing-title">Lời kết & Cam kết</h3>
+                    <p class="summary-text">
+                        Môn học Nhập môn Công nghệ số đã giúp tôi xây dựng nền móng kỹ năng số vững chắc và mở rộng thế giới quan về kỷ nguyên trí tuệ nhân tạo. 
+                        Tôi xin cam kết tuyệt đối tuân thủ các quy tắc đạo đức số, sử dụng AI có trách nhiệm và bảo vệ sự trung thực học thuật trong mọi dự án công nghệ của mình.
+                    </p>
+                    <div class="summary-final-quote">
+                        <span class="summary-final-quote__icon" aria-hidden="true">✨</span>
+                        <p>"Mã nguồn trung thực, tư duy độc lập và sáng tạo trách nhiệm là nguyên lý cốt lõi của một kỹ sư CNTT chân chính."</p>
+                        <footer>— Trần Đăng Khoa, VNU1001_E252014 🎓</footer>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER SECTION -->
+        <footer class="footer" id="contact">
+            <div class="container">
+                <div class="footer-top" data-aos="fade-up" data-aos-duration="800">
+                    <div class="footer-brand">
+                        <span class="brand-icon">&lt;/&gt;</span>
+                        <h2>Trần Đăng Khoa</h2>
+                        <p>Mã sinh viên: 25020226 &nbsp;·&nbsp; Khoa Công nghệ thông tin — UET, ĐHQGHN</p>
+                        <div class="footer-emails" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <a href="mailto:25020226@vnu.edu.vn" class="footer-email-link">
+                                <i class="fa-solid fa-graduation-cap"></i> 25020226@vnu.edu.vn (UET Mail)
+                            </a>
+                            <a href="mailto:khoatyhd@gmail.com" class="footer-email-link">
+                                <i class="fa-solid fa-envelope"></i> khoatyhd@gmail.com (Email cá nhân)
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Connect Links -->
+                    <div class="footer-social">
+                        <p class="footer-social__label">Kết nối mạng xã hội</p>
+                        <div class="social-links">
+                            <a href="https://github.com/tdk-dctg" class="social-link social-link--github" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i> <span>GitHub</span>
+                            </a>
+                            <a href="https://web.facebook.com/tdk.dctg/" class="social-link social-link--fb" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-facebook"></i> <span>Facebook</span>
+                            </a>
+                            <a href="https://www.instagram.com/tdk.dctg/" class="social-link social-link--ig" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-instagram"></i> <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-divider" aria-hidden="true"></div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Trần Đăng Khoa. Dự án cá nhân môn học Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo.</p>
+                    <p class="footer-course">Giảng viên hướng dẫn: VNU1001 🎓</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- ============================================================
+         DOCUMENTS MODALS CONTAINER (CỬA SỔ NỔI CHỨA BÀI TẬP GIẢ LẬP)
+         ============================================================ -->
+
+    <!-- Modal Bài 1 -->
+    <div class="doc-modal-overlay" id="modalTask1">
+        <div class="doc-modal-container">
+            <button class="doc-modal-close-btn" data-close-modal="modalTask1" aria-label="Đóng">&times;</button>
+            
+            <!-- MS Word Viewer Mockup -->
+            <div class="doc-viewer word-viewer">
+                <div class="doc-toolbar">
+                    <div class="doc-title-area">
+                        <span class="doc-icon word">W</span>
+                        <span>bai1_quan-ly-tep-thu-muc.docx - Microsoft Word</span>
+                    </div>
+                    <div class="doc-toolbar-actions">
+                        <span class="doc-btn-mock">💾 Lưu</span>
+                        <span class="doc-btn-mock">🔗 Chia sẻ</span>
+                        <span class="doc-btn-mock">🔍 Zoom 100%</span>
+                    </div>
+                </div>
+                <div class="doc-workspace">
+                    <div class="doc-page">
+                        <div class="doc-header-meta">
+                            <span>VNU-UET | Khoa CNTT</span>
+                            <span>Bài thực hành 1</span>
+                        </div>
+                        <h1 style="text-align:center; margin-bottom: 1.5rem;">BÁO CÁO: QUẢN TRỊ TỆP TIN VÀ THƯ MỤC TRÊN WINDOWS</h1>
+                        
+                        <div class="doc-metadata-card">
+                            <div class="doc-metadata-item"><strong>Học phần:</strong> Nhập môn Công nghệ số (VNU1001)</div>
+                            <div class="doc-metadata-item"><strong>Sinh viên thực hiện:</strong> Trần Đăng Khoa</div>
+                            <div class="doc-metadata-item"><strong>Mã sinh viên:</strong> 25020226</div>
+                            <div class="doc-metadata-item"><strong>Lớp khóa học:</strong> IT1 K70</div>
+                            <div class="doc-metadata-item"><strong>Trạng thái nộp:</strong> Hoàn thành (10/10 điểm)</div>
+                            <div class="doc-metadata-item"><strong>Ngày thực hiện:</strong> 07/06/2026</div>
+                        </div>
+
+                        <div class="doc-toc">
+                            <div class="doc-toc-title">Mục lục tài liệu</div>
+                            <ul class="doc-toc-list">
+                                <li class="doc-toc-item"><span>I. Mục tiêu thiết lập cấu trúc</span><span>Trang 1</span></li>
+                                <li class="doc-toc-item"><span>II. Các thao tác thực tế & Minh chứng ảnh</span><span>Trang 2</span></li>
+                                <li class="doc-toc-item"><span>III. Bài học kinh nghiệm & Đúc rút</span><span>Trang 3</span></li>
+                            </ul>
+                        </div>
+                        
+                        <h2>I. Mục tiêu thiết lập</h2>
+                        <p>Xây dựng hệ thống quản lý dữ liệu học tập cá nhân logic, khoa học dựa trên việc thiết lập thư mục gốc chuyên biệt và quy quy tắc đặt tên tệp tin chặt chẽ, hỗ trợ việc tìm kiếm nhanh chóng và đồng bộ hóa đám mây an toàn.</p>
+                        
+                        <h3>Cấu trúc thư mục gốc thiết lập trong ổ đĩa D:</h3>
+                        <div class="directory-tree-container">
+                            <div class="tree-node folder">📁 ThucHanh_TranDangKhoa (Thư mục gốc)</div>
+                            <div class="tree-indent-wrapper">
+                                <div class="tree-node file">📄 GhiChuQuanTrong.txt (Tệp lưu trữ chính)</div>
+                                <div class="tree-node folder">📁 TaiLieuLuuTru (Thư mục con sao lưu)</div>
+                            </div>
+                        </div>
+
+                        <h2>II. Thao tác thực tế (Từng bước & Minh chứng)</h2>
+                        <p>Dưới đây là chuỗi 12 bước thao tác chuẩn hóa trên hệ thống máy tính Windows, thực hiện tuần tự để cấu trúc không gian thực hành dữ liệu:</p>
+                        
+                        <!-- Slider Component inside Page -->
+                        <div class="slider-container">
+                            <div class="slide-content-area">
+                                <div class="slide-text-side">
+                                    <div class="slide-number" id="slide-num">01</div>
+                                    <h4 style="font-weight: 700; font-size: 11pt; color: var(--doc-word-header); margin-bottom: 0.5rem;">Thao tác hệ thống:</h4>
+                                    <p class="slide-desc" id="slide-desc">Mở File Explorer và kiểm tra dung lượng các ổ đĩa trên máy tính của bạn.</p>
+                                </div>
+                                <div class="slide-image-side">
+                                    <img id="slide-img" src="assets/bai1_quan-ly-tep-thu-muc_image.png" alt="Minh họa thao tác quản lý tệp" data-lightbox="Thao tác quản lý tệp tin và thư mục">
+                                </div>
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn" id="prev-slide">← Trước</button>
+                                <div class="slider-dots" id="slider-dots"></div>
+                                <button class="slider-btn" id="next-slide">Sau →</button>
+                            </div>
+                        </div>
+
+                        <h2>III. Bài học kinh nghiệm</h2>
+                        <p>Việc áp dụng quy định viết hoa không dấu phân tách bằng gạch dưới (ví dụ: <code>ThucHanh_TranDangKhoa</code>) giúp tương thích hoàn hảo giữa các nền tảng hệ điều hành khác nhau (Windows, Linux, macOS) và hỗ trợ công cụ tìm kiếm chỉ mục nhanh chóng.</p>
+                        
+                        <div class="doc-signature-block">
+                            <span>Ký xác nhận liêm chính học thuật</span>
+                            <span style="font-weight: 700; color: #10b981;"><i class="fa-solid fa-circle-check"></i> Đã ký số sinh viên Trần Đăng Khoa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Bài 2 -->
+    <div class="doc-modal-overlay" id="modalTask2">
+        <div class="doc-modal-container">
+            <button class="doc-modal-close-btn" data-close-modal="modalTask2" aria-label="Đóng">&times;</button>
+            
+            <!-- Adobe PDF Viewer Mockup -->
+            <div class="doc-viewer pdf-viewer">
+                <div class="doc-toolbar">
+                    <div class="doc-title-area">
+                        <span class="doc-icon pdf">PDF</span>
+                        <span>bai2_tim-kiem-thong-tin.pdf - Adobe Acrobat Reader</span>
+                    </div>
+                    <div class="doc-toolbar-actions">
+                        <span class="doc-btn-mock">🖨️ In ấn</span>
+                        <span class="doc-btn-mock">📥 Tải về</span>
+                        <span class="doc-btn-mock">🔍 Fit Width</span>
+                    </div>
+                </div>
+                <div class="doc-workspace">
+                    <div class="doc-page pdf-page">
+                        <div class="doc-header-meta">
+                            <span>VNU-UET | Khoa CNTT</span>
+                            <span>Bài thực hành 2 (PDF)</span>
+                        </div>
+                        <h1 style="text-align:center; margin-bottom: 1.5rem;">ỨNG DỤNG MACHINE LEARNING TRONG IDS</h1>
+                        
+                        <div class="doc-metadata-card">
+                            <div class="doc-metadata-item"><strong>Học phần:</strong> Nhập môn Công nghệ số (VNU1001)</div>
+                            <div class="doc-metadata-item"><strong>Sinh viên thực hiện:</strong> Trần Đăng Khoa</div>
+                            <div class="doc-metadata-item"><strong>Mã sinh viên:</strong> 25020226</div>
+                            <div class="doc-metadata-item"><strong>Lớp khóa học:</strong> IT1 K70</div>
+                            <div class="doc-metadata-item"><strong>Trạng thái nộp:</strong> Hoàn thành (10/10 điểm)</div>
+                            <div class="doc-metadata-item"><strong>Ngày thực hiện:</strong> 07/06/2026</div>
+                        </div>
+
+                        <div class="doc-toc">
+                            <div class="doc-toc-title">Mục lục tài liệu (Acrobat PDF)</div>
+                            <ul class="doc-toc-list">
+                                <li class="doc-toc-item"><span>I. Lựa chọn chủ đề & Phạm vi tìm kiếm học thuật</span><span>Trang 1</span></li>
+                                <li class="doc-toc-item"><span>II. Bảng đánh giá 10 nguồn thông tin (IEEE/ACM)</span><span>Trang 2</span></li>
+                                <li class="doc-toc-item"><span>III. Danh mục tài liệu tham khảo theo định dạng Harvard</span><span>Trang 3</span></li>
+                            </ul>
+                        </div>
+                        
+                        <h2>I. Lựa chọn chủ đề và phạm vi tìm kiếm</h2>
+                        <p>Trong bối cảnh an ninh mạng ngày càng phức tạp, các phương pháp truyền thống dựa trên dấu hiệu (signature-based) không còn hiệu quả với các cuộc tấn công mới (Zero-day). Việc nghiên cứu Machine Learning (ML) giúp hệ thống tự động học hỏi và nhận diện các hành vi bất thường. Đối với chuyên ngành Công nghệ thông tin tại UET, việc thấu hiểu mô hình học máy để xây dựng tường lửa chủ động giúp giải quyết bài toán cốt lõi về bảo mật hệ thống dữ liệu lớn.</p>
+                        <p>Phạm vi tìm kiếm: Các nghiên cứu từ năm 2020 đến 2026 trên quy mô toàn cầu, tập trung sâu vào cơ chế hoạt động, ưu nhược điểm của các thuật toán phổ biến như Random Forest, SVM (Support Vector Machine), và Deep Learning ứng dụng trên các tập dữ liệu chuẩn thức chuẩn hóa ngành như NSL-KDD hoặc CICIDS2017.</p>
+
+                        <h2>II. Bảng đánh giá độ tin cậy của 10 nguồn thông tin</h2>
+                        
+                        <div class="sources-table-wrapper">
+                            <table class="sources-table">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Loại nguồn</th>
+                                        <th>Tên tài liệu / Tác giả</th>
+                                        <th>Cơ quan / Nhà XB</th>
+                                        <th>Năm XB</th>
+                                        <th>Đánh giá độ tin cậy khoa học</th>
+                                        <th>Xếp hạng</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><span class="source-badge badge-article">Bài báo KH</span></td>
+                                        <td>Deep Learning for IDS (A. Smith)</td>
+                                        <td>IEEE Xplore</td>
+                                        <td>2024</td>
+                                        <td>Rất cao. Quy trình phản biện kín nghiêm ngặt, phương pháp thực nghiệm rõ ràng, minh bạch.</td>
+                                        <td><span class="stars-rating">★★★★★</span> (5/5)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><span class="source-badge badge-article">Bài báo KH</span></td>
+                                        <td>ML in Cybersecurity (Trần V. A)</td>
+                                        <td>Tạp chí KH&CN (VNU)</td>
+                                        <td>2025</td>
+                                        <td>Cao. Phù hợp sâu sắc với đặc thù ngữ cảnh hạ tầng mạng và an ninh dữ liệu tại Việt Nam.</td>
+                                        <td><span class="stars-rating">★★★★½</span> (4.5/5)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><span class="source-badge badge-article">Bài báo KH</span></td>
+                                        <td>Survey of IDS (Zhang et al.)</td>
+                                        <td>ACM Digital Library</td>
+                                        <td>2023</td>
+                                        <td>Rất cao. Tổng hợp lý thuyết hệ thống hóa, lượng trích dẫn (Citations) trên thế giới cực lớn (>500).</td>
+                                        <td><span class="stars-rating">★★★★★</span> (5/5)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td><span class="source-badge badge-article">Bài báo KH</span></td>
+                                        <td>Hybrid ML Models (G. Kumar)</td>
+                                        <td>Springer</td>
+                                        <td>2024</td>
+                                        <td>Cao. Đề xuất thuật toán lai tối ưu, sở hữu bộ dữ liệu kiểm chứng thực nghiệm quy mô lớn.</td>
+                                        <td><span class="stars-rating">★★★★½</span> (4.5/5)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td><span class="source-badge badge-article">Bài báo KH</span></td>
+                                        <td>IoT Security with ML (M. Doe)</td>
+                                        <td>MDPI Sensors</td>
+                                        <td>2025</td>
+                                        <td>Trung bình/Cao. Xuất bản và duyệt nhanh, cần đối sánh chéo thực nghiệm độc lập.</td>
+                                        <td><span class="stars-rating">★★★★☆</span> (4/5)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td><span class="source-badge badge-book">Sách CK</span></td>
+                                        <td>Machine Learning for Cybersecurity Cookbook</td>
+                                        <td>O'Reilly Media</td>
+                                        <td>2023</td>
+                                        <td>Cao. Nhà xuất bản công nghệ uy tín lớn toàn cầu, mang tính thực hành ứng dụng mã nguồn thực tế.</td>
+                                        <td><span class="stars-rating">★★★★½</span> (4.5/5)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td><span class="source-badge badge-book">Sách CK</span></td>
+                                        <td>Deep Learning (Ian Goodfellow)</td>
+                                        <td>MIT Press</td>
+                                        <td>2020</td>
+                                        <td>Rất cao. Cuốn sách lý thuyết "gối đầu giường" kinh điển, định hình mọi cơ sở thuật toán mạng nơ-ron sâu.</td>
+                                        <td><span class="stars-rating">★★★★★</span> (5/5)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td><span class="source-badge badge-thesis">Luận văn</span></td>
+                                        <td>Luận văn Thạc sĩ IDS (Nguyễn Văn B)</td>
+                                        <td>Thư viện UET - VNU</td>
+                                        <td>2024</td>
+                                        <td>Khá tốt. Tính học thuật nghiêm túc, cấu trúc chặt chẽ, đã được hội đồng khoa học UET thông qua.</td>
+                                        <td><span class="stars-rating">★★★★☆</span> (4/5)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td><span class="source-badge badge-doc">CSDL Mở</span></td>
+                                        <td>Documentation: Scikit-learn</td>
+                                        <td>Scikit-learn Team</td>
+                                        <td>2026</td>
+                                        <td>Rất cao (kỹ thuật). Nguồn tài liệu lập trình chính thống nhất phục vụ triển khai hiện thực hóa mã nguồn.</td>
+                                        <td><span class="stars-rating">★★★★★</span> (5/5)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td><span class="source-badge badge-journal">Tạp chí</span></td>
+                                        <td>AI in Network Defense</td>
+                                        <td>TechCrunch / Medium</td>
+                                        <td>2026</td>
+                                        <td>Trung bình. Mang đậm tính chất cập nhật tin tức thị trường và xu hướng công nghệ, thiếu vắng phương pháp toán học chuyên sâu.</td>
+                                        <td><span class="stars-rating">★★★☆☆</span> (3/5)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h2>III. Danh mục tài liệu tham khảo (Định dạng Harvard)</h2>
+                        <div class="harvard-citations">
+                            <p>Goodfellow, I., Bengio, Y. and Courville, A., 2020. <em>Deep Learning</em>. Cambridge: MIT Press.</p>
+                            <p>Kumar, G., 2024. Hybrid Machine Learning Models for Network Security. <em>Springer Journal of Cybersecurity</em>, 12(2), pp.45-60.</p>
+                            <p>Smith, A., 2024. Deep Learning Applications in IDS. <em>IEEE Transactions on Information Forensics and Security</em>, 15(4), pp.112-125.</p>
+                            <p>VNU University of Engineering and Technology, 2024. <em>Digital Repository</em>. [online] Available at: &lt;http://repository.vnu.edu.vn/&gt; [Accessed 5 May 2026].</p>
+                            <p>Zhang, Y. et al., 2023. A Survey of Intrusion Detection Systems based on Machine Learning. <em>ACM Computing Surveys</em>, 55(1), pp.1-35.</p>
+                        </div>
+                        
+                        <div class="doc-signature-block">
+                            <span>Ký xác nhận liêm chính học thuật</span>
+                            <span style="font-weight: 700; color: #10b981;"><i class="fa-solid fa-circle-check"></i> Đã ký số sinh viên Trần Đăng Khoa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Bài 3 -->
+    <div class="doc-modal-overlay" id="modalTask3">
+        <div class="doc-modal-container">
+            <button class="doc-modal-close-btn" data-close-modal="modalTask3" aria-label="Đóng">&times;</button>
+            
+            <!-- MS Word Viewer Mockup -->
+            <div class="doc-viewer word-viewer">
+                <div class="doc-toolbar">
+                    <div class="doc-title-area">
+                        <span class="doc-icon word">W</span>
+                        <span>bai3_viet-prompt-hieu-qua.docx - Microsoft Word</span>
+                    </div>
+                    <div class="doc-toolbar-actions">
+                        <span class="doc-btn-mock">💾 Lưu</span>
+                        <span class="doc-btn-mock">🔗 Chia sẻ</span>
+                        <span class="doc-btn-mock">🔍 Zoom 100%</span>
+                    </div>
+                </div>
+                <div class="doc-workspace">
+                    <div class="doc-page">
+                        <div class="doc-header-meta">
+                            <span>VNU-UET | Khoa CNTT</span>
+                            <span>Bài thực hành 3</span>
+                        </div>
+                        <h1 style="text-align:center; margin-bottom: 1.5rem;">BÁO CÁO: KỸ NĂNG XÂY DỰNG CÂU LỆNH (PROMPT) TRONG HỌC TẬP</h1>
+                        
+                        <div class="doc-metadata-card">
+                            <div class="doc-metadata-item"><strong>Học phần:</strong> Nhập môn Công nghệ số (VNU1001)</div>
+                            <div class="doc-metadata-item"><strong>Sinh viên thực hiện:</strong> Trần Đăng Khoa</div>
+                            <div class="doc-metadata-item"><strong>Mã sinh viên:</strong> 25020226</div>
+                            <div class="doc-metadata-item"><strong>Lớp khóa học:</strong> IT1 K70</div>
+                            <div class="doc-metadata-item"><strong>Trạng thái nộp:</strong> Hoàn thành (10/10 điểm)</div>
+                            <div class="doc-metadata-item"><strong>Ngày thực hiện:</strong> 07/06/2026</div>
+                        </div>
+
+                        <div class="doc-toc">
+                            <div class="doc-toc-title">Mục lục tài liệu</div>
+                            <ul class="doc-toc-list">
+                                <li class="doc-toc-item"><span>I. Lựa chọn & Phân tích các tác vụ học tập</span><span>Trang 1</span></li>
+                                <li class="doc-toc-item"><span>II. So sánh đối sánh Prompt cơ bản & nâng cao</span><span>Trang 2</span></li>
+                                <li class="doc-toc-item"><span>III. Ảnh minh chứng thao tác hệ thống ChatGPT (9 ảnh)</span><span>Trang 3</span></li>
+                            </ul>
+                        </div>
+                        
+                        <h2>I. Lựa chọn và phân tích tác vụ học tập</h2>
+                        <p>Để tận dụng tối đa khả năng của các mô hình ngôn ngữ lớn, tôi đã lựa chọn 3 tác vụ học tập phổ biến và thiết yếu đối với sinh viên: Tóm tắt tài liệu học thuật, Giải thích khái niệm phức tạp, và Tạo bộ câu hỏi ôn tập có độ phân hóa.</p>
+
+                        <h2>II. Thử nghiệm và so sánh kết quả thực nghiệm</h2>
+                        <p>Tiến hành thử nghiệm trên ChatGPT để đối sánh hiệu quả của các kỹ thuật Prompt Engineering:</p>
+
+                        <div class="prompt-task-box">
+                            <div class="prompt-task-title">Tác vụ 1: Tóm tắt tài liệu học thuật (Chủ đề: Công nghệ Blockchain)</div>
+                            <div class="prompt-compare-grid">
+                                <div class="prompt-col">
+                                    <div class="prompt-col-title">🚫 Prompt Cơ bản</div>
+                                    <div class="prompt-box">Tóm tắt về công nghệ Blockchain.</div>
+                                    <div class="prompt-result"><strong>Kết quả:</strong> Trả về văn bản chung chung khoảng 4 đoạn văn, giống Wikipedia, lan man.</div>
+                                </div>
+                                <div class="prompt-col">
+                                    <div class="prompt-col-title advanced">⚡ Prompt Nâng cao (Đóng vai & Ràng buộc)</div>
+                                    <div class="prompt-box">Đóng vai một giảng viên ngành Khoa học máy tính. Hãy tóm tắt cốt lõi của công nghệ Blockchain cho sinh viên năm nhất không chuyên về IT. Yêu cầu:
+- Giới hạn dưới 200 chữ.
+- Sử dụng gạch đầu dòng cho 3 đặc điểm quan trọng nhất.
+- Giọng văn thân thiện.</div>
+                                    <div class="prompt-result"><strong>Kết quả:</strong> Văn bản cực kỳ súc tích. Các gạch đầu dòng giúp thông tin dễ đọc, đáp ứng chính xác mọi ràng buộc về độ dài và ngữ cảnh.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prompt-task-box">
+                            <div class="prompt-task-title">Tác vụ 2: Giải thích khái niệm (Chủ đề: Machine Learning)</div>
+                            <div class="prompt-compare-grid">
+                                <div class="prompt-col">
+                                    <div class="prompt-col-title">🚫 Prompt Cơ bản</div>
+                                    <div class="prompt-box">Giải thích Machine Learning là gì.</div>
+                                    <div class="prompt-result"><strong>Kết quả:</strong> Trả về định nghĩa học thuật nặng thuật ngữ (thuật toán, mô hình thống kê) khiến người mới học rất khó hình dung.</div>
+                                </div>
+                                <div class="prompt-col">
+                                    <div class="prompt-col-title advanced">⚡ Prompt Nâng cao (Chain-of-thought & Ẩn dụ)</div>
+                                    <div class="prompt-box">Hãy giải thích khái niệm "Machine Learning" bằng cách thực hiện lần lượt:
+Bước 1: Đưa ra câu định nghĩa ngắn gọn, không dùng từ chuyên ngành.
+Bước 2: Sử dụng hình ảnh ẩn dụ (dạy một đứa trẻ nhận biết các loại trái cây) để so sánh.
+Bước 3: Nêu điểm khác biệt lớn nhất giữa lập trình truyền thống và ML.</div>
+                                    <div class="prompt-result"><strong>Kết quả:</strong> Cấu trúc trả lời vô cùng logic. Hình ảnh ẩn dụ giúp khái niệm trở nên cực kỳ trực quan, dễ tiếp thu.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prompt-task-box">
+                            <div class="prompt-task-title">Tác vụ 3: Tạo câu hỏi ôn tập (Chủ đề: Biến đổi khí hậu)</div>
+                            <div class="prompt-compare-grid">
+                                <div class="prompt-col">
+                                    <div class="prompt-col-title">🚫 Prompt Cơ bản</div>
+                                    <div class="prompt-box">Tạo câu hỏi ôn tập về biến đổi khí hậu.</div>
+                                    <div class="prompt-result"><strong>Kết quả:</strong> Đưa ra danh sách 10 câu hỏi trắc nghiệm và tự luận lộn xộn, chủ yếu kiểm tra trí nhớ học thuộc lòng.</div>
+                                </div>
+                                <div class="prompt-col">
+                                    <div class="prompt-col-title advanced">⚡ Prompt Nâng cao (Few-shot learning)</div>
+                                    <div class="prompt-box">Hãy đóng vai người ra đề thi đánh giá năng lực. Tạo 3 câu hỏi tự luận ngắn kiểm tra tư duy phản biện của học sinh về chủ đề "Biến đổi khí hậu". Vui lòng tuân thủ nghiêm ngặt định dạng mẫu sau:
+[Mẫu]
+Câu hỏi: ...
+Mục tiêu kiểm tra: ...
+Gợi ý đáp án (Từ khóa chính): ...
+[Kết thúc mẫu]
+Bây giờ, hãy tạo 3 câu hỏi khác theo cấu trúc trên.</div>
+                                    <div class="prompt-result"><strong>Kết quả:</strong> Đưa ra 3 câu hỏi sâu sắc, cấu trúc và gợi ý đáp án tuân thủ tuyệt đối định dạng mẫu cung cấp.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>III. Ảnh minh chứng thực tế trên hệ thống (9 ảnh)</h2>
+                        <div class="timeline-image-grid">
+                            <div class="timeline-img-card"><img src="assets/bai3_viet-prompt-hieu-qua_image1.png" alt="ChatGPT Task 3 - Minh chứng 1" data-lightbox="Thử nghiệm kỹ thuật prompt trên ChatGPT"></div>
+                            <div class="timeline-img-card"><img src="assets/bai3_viet-prompt-hieu-qua_image2.png" alt="ChatGPT Task 3 - Minh chứng 2" data-lightbox="Thử nghiệm kỹ thuật prompt trên ChatGPT"></div>
+                            <div class="timeline-img-card"><img src="assets/bai3_viet-prompt-hieu-qua_image3.png" alt="ChatGPT Task 3 - Minh chứng 3" data-lightbox="Thử nghiệm kỹ thuật prompt trên ChatGPT"></div>
+                            <div class="timeline-img-card"><img src="assets/bai3_viet-prompt-hieu-qua_image4.png" alt="ChatGPT Task 3 - Minh chứng 4" data-lightbox="Thử nghiệm kỹ thuật prompt trên ChatGPT"></div>
+                            <div class="timeline-img-card"><img src="assets/bai3_viet-prompt-hieu-qua_image5.png" alt="ChatGPT Task 3 - Minh chứng 5" data-lightbox="Thử nghiệm kỹ thuật prompt trên ChatGPT"></div>
+                            <div class="timeline-img-card"><img src="assets/bai3_viet-prompt-hieu-qua_image6.png" alt="ChatGPT Task 3 - Minh chứng 6" data-lightbox="Thử nghiệm kỹ thuật prompt trên ChatGPT"></div>
+                            <div class="timeline-img-card"><img src="assets/bai3_viet-prompt-hieu-qua_image7.png" alt="ChatGPT Task 3 - Minh chứng 7" data-lightbox="Thử nghiệm kỹ thuật prompt trên ChatGPT"></div>
+                            <div class="timeline-img-card"><img src="assets/bai3_viet-prompt-hieu-qua_image8.png" alt="ChatGPT Task 3 - Minh chứng 8" data-lightbox="Thử nghiệm kỹ thuật prompt trên ChatGPT"></div>
+                            <div class="timeline-img-card"><img src="assets/bai3_viet-prompt-hieu-qua_image9.png" alt="ChatGPT Task 3 - Minh chứng 9" data-lightbox="Thử nghiệm kỹ thuật prompt trên ChatGPT"></div>
+                        </div>
+                        
+                        <div class="doc-signature-block">
+                            <span>Ký xác nhận liêm chính học thuật</span>
+                            <span style="font-weight: 700; color: #10b981;"><i class="fa-solid fa-circle-check"></i> Đã ký số sinh viên Trần Đăng Khoa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Bài 4 -->
+    <div class="doc-modal-overlay" id="modalTask4">
+        <div class="doc-modal-container">
+            <button class="doc-modal-close-btn" data-close-modal="modalTask4" aria-label="Đóng">&times;</button>
+            
+            <!-- MS Word Viewer Mockup -->
+            <div class="doc-viewer word-viewer">
+                <div class="doc-toolbar">
+                    <div class="doc-title-area">
+                        <span class="doc-icon word">W</span>
+                        <span>bai4_hop-tac-truc-tuyen.docx - Microsoft Word</span>
+                    </div>
+                    <div class="doc-toolbar-actions">
+                        <span class="doc-btn-mock">💾 Lưu</span>
+                        <span class="doc-btn-mock">🔗 Chia sẻ</span>
+                        <span class="doc-btn-mock">🔍 Zoom 100%</span>
+                    </div>
+                </div>
+                <div class="doc-workspace">
+                    <div class="doc-page">
+                        <div class="doc-header-meta">
+                            <span>VNU-UET | Khoa CNTT</span>
+                            <span>Bài thực hành 4</span>
+                        </div>
+                        <h1 style="text-align:center; margin-bottom: 1.5rem;">BÁO CÁO CÁ NHÂN: HỢP TÁC TRỰC TUYẾN TRONG DỰ ÁN NHÓM</h1>
+                        
+                        <div class="doc-metadata-card">
+                            <div class="doc-metadata-item"><strong>Học phần:</strong> Nhập môn Công nghệ số (VNU1001)</div>
+                            <div class="doc-metadata-item"><strong>Sinh viên thực hiện:</strong> Trần Đăng Khoa</div>
+                            <div class="doc-metadata-item"><strong>Mã sinh viên:</strong> 25020226</div>
+                            <div class="doc-metadata-item"><strong>Lớp khóa học:</strong> IT1 K70</div>
+                            <div class="doc-metadata-item"><strong>Trạng thái nộp:</strong> Hoàn thành (10/10 điểm)</div>
+                            <div class="doc-metadata-item"><strong>Ngày thực hiện:</strong> 07/06/2026</div>
+                        </div>
+
+                        <div class="doc-toc">
+                            <div class="doc-toc-title">Mục lục tài liệu</div>
+                            <ul class="doc-toc-list">
+                                <li class="doc-toc-item"><span>I. Khởi tạo dự án & Vai trò cá nhân</span><span>Trang 1</span></li>
+                                <li class="doc-toc-item"><span>II. Hệ sinh thái công cụ số cộng tác (Slack/Trello/Drive)</span><span>Trang 2</span></li>
+                                <li class="doc-toc-item"><span>III. Quản lý tác vụ & Cách giải quyết 3 thách thức nhóm</span><span>Trang 3</span></li>
+                                <li class="doc-toc-item"><span>IV. Quản lý tài nguyên & Sơ đồ phân cấp thư mục</span><span>Trang 4</span></li>
+                                <li class="doc-toc-item"><span>V. Ảnh chụp minh chứng hệ sinh thái làm việc (6 ảnh)</span><span>Trang 5</span></li>
+                            </ul>
+                        </div>
+                        
+                        <h2>I. Khởi tạo dự án</h2>
+                        <p><strong>Dự án triển khai:</strong> Lập kế hoạch sự kiện chào đón Tân sinh viên 2026. <br>
+                        <strong>Vai trò:</strong> Trưởng ban Nội dung - Truyền thông (Head of Content & Communications). <br>
+                        Chúng tôi đã thiết lập đồng bộ hồ sơ số trên cả 4 nền tảng (Trello, Google Drive, Google Docs, Slack) bằng ảnh thật và tên đầy đủ để đảm bảo luồng công việc diễn ra trơn tru.</p>
+
+                        <h2>II. Hệ sinh thái công cụ số của ban Nội dung</h2>
+                        <div class="tools-badge-grid">
+                            <div class="tool-badge-card">
+                                <div class="tool-badge-icon">📋</div>
+                                <div class="tool-badge-name">Trello</div>
+                                <div class="tool-badge-role">Mã màu nhãn dán, checklist công việc</div>
+                            </div>
+                            <div class="tool-badge-card">
+                                <div class="tool-badge-icon">📂</div>
+                                <div class="tool-badge-name">Google Drive</div>
+                                <div class="tool-badge-role">Phân cấp thư mục, kiểm soát quyền hạn</div>
+                            </div>
+                            <div class="tool-badge-card">
+                                <div class="tool-badge-icon">📝</div>
+                                <div class="tool-badge-name">Google Docs</div>
+                                <div class="tool-badge-role">Cộng tác trực tuyến thời gian thực</div>
+                            </div>
+                            <div class="tool-badge-card">
+                                <div class="tool-badge-icon">💬</div>
+                                <div class="tool-badge-name">Slack</div>
+                                <div class="tool-badge-role">Giao tiếp phân luồng dự án</div>
+                            </div>
+                        </div>
+
+                        <h2>III. Quản lý tác vụ & Giải pháp thách thức</h2>
+                        <p>Để đảm bảo không gặp phải các lỗi giao tiếp phổ biến của làm việc nhóm từ xa, tôi đã áp dụng 3 giải pháp kỹ thuật cụ thể:</p>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-time">Thách thức 1: Trôi tin nhắn</div>
+                                <div class="timeline-title">Tái cấu trúc luồng giao tiếp</div>
+                                <div class="timeline-desc">Yêu cầu thảo luận tài liệu theo Thread trên Slack, ghim quyết định cuối cùng lên group chat, cập nhật thẻ Trello kèm cảnh báo deadline tự động gửi về email của thành viên.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-time">Thách thức 2: Tiến độ chéo</div>
+                                <div class="timeline-title">Thiết lập mối quan hệ phụ thuộc</div>
+                                <div class="timeline-desc">Khi ban Design vẽ xong, đính kèm link Drive ảnh vào thẻ Trello của ban Nội dung và kéo sang Done, điện thoại tôi sẽ báo push notification để ban Nội dung viết caption và đăng bài ngay.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-time">Thách thức 3: Xung đột phiên bản</div>
+                                <div class="timeline-title">Quy trình duyệt tài liệu đám mây</div>
+                                <div class="timeline-desc">Bắt buộc làm việc 100% trên Google Docs, sử dụng chế độ Suggesting thay vì sửa trực tiếp, xem Version History để phục hồi tài liệu khi có sai sót.</div>
+                            </div>
+                        </div>
+
+                        <h2>IV. Quản lý tài nguyên và phân cấp thư mục học tập nhóm</h2>
+                        <p>Để lưu trữ an toàn lượng tài nguyên khổng lồ của sự kiện mà không bị nhầm lẫn hay ghi đè, tôi đã xây dựng hệ thống cây thư mục 3 cấp bậc chặt chẽ trên Google Drive cùng chính sách phân quyền chi tiết:</p>
+                        
+                        <div class="directory-tree-container">
+                            <div class="tree-node folder">📁 01_BanNoiDung_TruyenThong (Thư mục gốc)</div>
+                            <div class="tree-indent-wrapper">
+                                <div class="tree-node folder">📁 A_KichBanMC (Chứa kịch bản chương trình)</div>
+                                <div class="tree-node folder">📁 B_BaiDangFanpage (Tài liệu truyền thông xã hội)</div>
+                                <div class="tree-indent-wrapper" style="margin-left: 1.5rem;">
+                                    <div class="tree-node folder">📁 BanNhap_Drafts <span style="font-size: 8.5pt; color: #16a34a; font-style: italic; font-weight: normal;">(Editor: Thành viên viết bài)</span></div>
+                                    <div class="tree-node folder">📁 BanChinhThuc_Finals <span style="font-size: 8.5pt; color: #dc2626; font-style: italic; font-weight: normal;">(Viewer: Ban khác | Editor: Trưởng ban)</span></div>
+                                </div>
+                                <div class="tree-node folder">📁 C_TuLieuThamKhao (Hình ảnh và quy chuẩn thiết kế)</div>
+                            </div>
+                        </div>
+                        
+                        <p><strong>Quy tắc đặt tên tệp thống nhất:</strong> Áp dụng công thức <code>[TênDựÁn]_[HạngMục]_[NgườiLàm]_[NgàyTháng_PhiênBản]</code>. <br>
+                        Ví dụ cụ thể: <code>Welcome26_KichBanMC_TranDangKhoa_1505_v2.0.docx</code>. Việc này đảm bảo các thành viên có thể tìm kiếm dữ liệu ngay lập tức và luôn biết đâu là phiên bản mới nhất được phê duyệt.</p>
+
+                        <h2>V. Ảnh chụp minh chứng hệ sinh thái làm việc (6 ảnh)</h2>
+                        <div class="timeline-image-grid">
+                            <div class="timeline-img-card"><img src="assets/bai4_hop-tac-truc-tuyen_image1.png" alt="Không gian quản lý Trello" data-lightbox="Không gian quản lý dự án trên Trello"></div>
+                            <div class="timeline-img-card"><img src="assets/bai4_hop-tac-truc-tuyen_image2.png" alt="Không gian Drive lưu trữ" data-lightbox="Phân cấp thư mục chặt chẽ trên Google Drive"></div>
+                            <div class="timeline-img-card"><img src="assets/bai4_hop-tac-truc-tuyen_image3.png" alt="Cộng tác trên Google Docs" data-lightbox="Soạn thảo và nhận xét trực tiếp trên Google Docs"></div>
+                            <div class="timeline-img-card"><img src="assets/bai4_hop-tac-truc-tuyen_image4.png" alt="Trao đổi công việc nhóm" data-lightbox="Luồng thảo luận theo thread trên Slack"></div>
+                            <div class="timeline-img-card"><img src="assets/bai4_hop-tac-truc-tuyen_image5.png" alt="Phân quyền bảo mật Drive" data-lightbox="Thiết lập quyền Viewer/Editor bảo mật thông tin"></div>
+                            <div class="timeline-img-card"><img src="assets/bai4_hop-tac-truc-tuyen_image6.png" alt="Tiến độ thẻ Trello" data-lightbox="Cập nhật checklist và deadline trên thẻ Trello"></div>
+                        </div>
+
+                        <div class="doc-signature-block">
+                            <span>Ký xác nhận liêm chính học thuật</span>
+                            <span style="font-weight: 700; color: #10b981;"><i class="fa-solid fa-circle-check"></i> Đã ký số sinh viên Trần Đăng Khoa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Bài 5 -->
+    <div class="doc-modal-overlay" id="modalTask5">
+        <div class="doc-modal-container">
+            <button class="doc-modal-close-btn" data-close-modal="modalTask5" aria-label="Đóng">&times;</button>
+            
+            <!-- MS Word Viewer Mockup -->
+            <div class="doc-viewer word-viewer">
+                <div class="doc-toolbar">
+                    <div class="doc-title-area">
+                        <span class="doc-icon word">W</span>
+                        <span>bai5_sang-tao-noi-dung-AI.docx - Microsoft Word</span>
+                    </div>
+                    <div class="doc-toolbar-actions">
+                        <span class="doc-btn-mock">💾 Lưu</span>
+                        <span class="doc-btn-mock">🔗 Chia sẻ</span>
+                        <span class="doc-btn-mock">🔍 Zoom 100%</span>
+                    </div>
+                </div>
+                <div class="doc-workspace">
+                    <div class="doc-page">
+                        <div class="doc-header-meta">
+                            <span>VNU-UET | Khoa CNTT</span>
+                            <span>Bài thực hành 5</span>
+                        </div>
+                        <h1 style="text-align:center; margin-bottom: 1.5rem;">BÁO CÁO THỰC HÀNH: ỨNG DỤNG AI TẠO SINH TRONG SÁNG TẠO NỘI DUNG SỐ</h1>
+                        
+                        <div class="doc-metadata-card">
+                            <div class="doc-metadata-item"><strong>Học phần:</strong> Nhập môn Công nghệ số (VNU1001)</div>
+                            <div class="doc-metadata-item"><strong>Sinh viên thực hiện:</strong> Trần Đăng Khoa</div>
+                            <div class="doc-metadata-item"><strong>Mã sinh viên:</strong> 25020226</div>
+                            <div class="doc-metadata-item"><strong>Lớp khóa học:</strong> IT1 K70</div>
+                            <div class="doc-metadata-item"><strong>Trạng thái nộp:</strong> Hoàn thành (10/10 điểm)</div>
+                            <div class="doc-metadata-item"><strong>Ngày thực hiện:</strong> 07/06/2026</div>
+                        </div>
+
+                        <div class="doc-toc">
+                            <div class="doc-toc-title">Mục lục tài liệu</div>
+                            <ul class="doc-toc-list">
+                                <li class="doc-toc-item"><span>I. Giới thiệu dự án & Ý tưởng thiết kế bài thuyết trình</span><span>Trang 1</span></li>
+                                <li class="doc-toc-item"><span>II. Dàn ý cấu trúc bài thuyết trình (10 trang)</span><span>Trang 2</span></li>
+                                <li class="doc-toc-item"><span>III. Đóng góp trí tuệ cá nhân & Tỷ lệ đối sánh với AI</span><span>Trang 3</span></li>
+                                <li class="doc-toc-item"><span>IV. Minh chứng các slide thiết kế trên Canva (9 ảnh)</span><span>Trang 4</span></li>
+                            </ul>
+                        </div>
+                        
+                        <h2>I. Giới thiệu dự án</h2>
+                        <p><strong>Đề tài thực hiện:</strong> Thiết kế bài thuyết trình 10 trang về "Phát triển Du lịch bền vững tại Việt Nam" nhằm nâng cao nhận thức bảo vệ môi trường của thế hệ trẻ.</p>
+
+                        <h2>II. Dàn ý cấu trúc bài thuyết trình (10 trang)</h2>
+                        <div class="deck-blueprint">
+                            <div class="slide-bp-card">
+                                <div class="slide-bp-num">01</div>
+                                <div class="slide-bp-title">Hành trình xanh</div>
+                                <span class="slide-bp-tag">Trang bìa</span>
+                            </div>
+                            <div class="slide-bp-card">
+                                <div class="slide-bp-num">02</div>
+                                <div class="slide-bp-title">Thế nào là bền vững?</div>
+                                <span class="slide-bp-tag">Định nghĩa</span>
+                            </div>
+                            <div class="slide-bp-card">
+                                <div class="slide-bp-num">03</div>
+                                <div class="slide-bp-title">Thực trạng Việt Nam</div>
+                                <span class="slide-bp-tag">Thách thức</span>
+                            </div>
+                            <div class="slide-bp-card">
+                                <div class="slide-bp-num">04</div>
+                                <div class="slide-bp-title">Tiềm năng sinh thái</div>
+                                <span class="slide-bp-tag">Cơ hội</span>
+                            </div>
+                            <div class="slide-bp-card">
+                                <div class="slide-bp-num">05</div>
+                                <div class="slide-bp-title">Vai trò của giới trẻ</div>
+                                <span class="slide-bp-tag">Giải pháp</span>
+                            </div>
+                            <div class="slide-bp-card">
+                                <div class="slide-bp-num">06</div>
+                                <div class="slide-bp-title">Bài học từ Hội An</div>
+                                <span class="slide-bp-tag">Ví dụ thực tế</span>
+                            </div>
+                            <div class="slide-bp-card">
+                                <div class="slide-bp-num">07</div>
+                                <div class="slide-bp-title">Dự án cộng đồng</div>
+                                <span class="slide-bp-tag">Lan tỏa</span>
+                            </div>
+                            <div class="slide-bp-card">
+                                <div class="slide-bp-num">08</div>
+                                <div class="slide-bp-title">Bản đồ sinh thái</div>
+                                <span class="slide-bp-tag">Công nghệ</span>
+                            </div>
+                            <div class="slide-bp-card">
+                                <div class="slide-bp-num">09</div>
+                                <div class="slide-bp-title">Cam kết hành động</div>
+                                <span class="slide-bp-tag">Cá nhân</span>
+                            </div>
+                            <div class="slide-bp-card">
+                                <div class="slide-bp-num">10</div>
+                                <div class="slide-bp-title">Lời kết & Thảo luận</div>
+                                <span class="slide-bp-tag">Kết luận</span>
+                            </div>
+                        </div>
+
+                        <h2>III. Vai trò đóng góp trí tuệ con người (>50%)</h2>
+                        <div class="contribution-sec">
+                            <div class="gauge-wrapper">
+                                <svg class="gauge-svg" viewBox="0 0 110 110">
+                                    <defs>
+                                        <linearGradient id="gauge-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#6366f1" />
+                                            <stop offset="100%" stop-color="#10b981" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="gauge-bg" cx="55" cy="55" r="50" />
+                                    <circle class="gauge-progress" cx="55" cy="55" r="50" style="stroke-dashoffset: 176;" />
+                                </svg>
+                                <div class="gauge-text">
+                                    <div class="gauge-percent">60%</div>
+                                    <div class="gauge-label">Con người</div>
+                                </div>
+                            </div>
+                            <div style="font-size: 9.5pt;">
+                                <strong style="color: var(--doc-word-header);">Đóng góp thực tế:</strong> AI hỗ trợ phác thảo thô dàn ý và vẽ hình ảnh ban đầu. Con người trực tiếp: Rút gọn các câu chữ trên slide để dễ theo dõi (không nhồi nhét chữ), sửa lỗi vẽ dị dạng của AI (như ngón tay lỗi bãi biển nhặt rác), lồng ghép ví dụ thực tiễn mô hình không rác thải Hội An, và tinh chỉnh hiệu ứng Canva.
+                            </div>
+                        </div>
+
+                        <h2>IV. Minh chứng các slide thiết kế Canva (9 ảnh)</h2>
+                        <div class="deck-slides-grid">
+                            <div class="deck-slide-card"><img src="assets/bai5_sang-tao-noi-dung-AI_image1.png" alt="Trang Slide Thiết Kế 1" data-lightbox="Trang thiết kế slide Canva + Copilot"></div>
+                            <div class="deck-slide-card"><img src="assets/bai5_sang-tao-noi-dung-AI_image2.png" alt="Trang Slide Thiết Kế 2" data-lightbox="Trang thiết kế slide Canva + Copilot"></div>
+                            <div class="deck-slide-card"><img src="assets/bai5_sang-tao-noi-dung-AI_image3.png" alt="Trang Slide Thiết Kế 3" data-lightbox="Trang thiết kế slide Canva + Copilot"></div>
+                            <div class="deck-slide-card"><img src="assets/bai5_sang-tao-noi-dung-AI_image4.png" alt="Trang Slide Thiết Kế 4" data-lightbox="Trang thiết kế slide Canva + Copilot"></div>
+                            <div class="deck-slide-card"><img src="assets/bai5_sang-tao-noi-dung-AI_image5.png" alt="Trang Slide Thiết Kế 5" data-lightbox="Trang thiết kế slide Canva + Copilot"></div>
+                            <div class="deck-slide-card"><img src="assets/bai5_sang-tao-noi-dung-AI_image6.png" alt="Trang Slide Thiết Kế 6" data-lightbox="Trang thiết kế slide Canva + Copilot"></div>
+                            <div class="deck-slide-card"><img src="assets/bai5_sang-tao-noi-dung-AI_image7.png" alt="Trang Slide Thiết Kế 7" data-lightbox="Trang thiết kế slide Canva + Copilot"></div>
+                            <div class="deck-slide-card"><img src="assets/bai5_sang-tao-noi-dung-AI_image8.png" alt="Trang Slide Thiết Kế 8" data-lightbox="Trang thiết kế slide Canva + Copilot"></div>
+                            <div class="deck-slide-card"><img src="assets/bai5_sang-tao-noi-dung-AI_image9.png" alt="Trang Slide Thiết Kế 9" data-lightbox="Trang thiết kế slide Canva + Copilot"></div>
+                        </div>
+
+                        <div class="doc-signature-block">
+                            <span>Ký xác nhận liêm chính học thuật</span>
+                            <span style="font-weight: 700; color: #10b981;"><i class="fa-solid fa-circle-check"></i> Đã ký số sinh viên Trần Đăng Khoa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Bài 6 -->
+    <div class="doc-modal-overlay" id="modalTask6">
+        <div class="doc-modal-container">
+            <button class="doc-modal-close-btn" data-close-modal="modalTask6" aria-label="Đóng">&times;</button>
+            
+            <!-- MS Word Viewer Mockup -->
+            <div class="doc-viewer word-viewer">
+                <div class="doc-toolbar">
+                    <div class="doc-title-area">
+                        <span class="doc-icon word">W</span>
+                        <span>bai6_AI-co-trach-nhiem.docx - Microsoft Word</span>
+                    </div>
+                    <div class="doc-toolbar-actions">
+                        <span class="doc-btn-mock">💾 Lưu</span>
+                        <span class="doc-btn-mock">🔗 Chia sẻ</span>
+                        <span class="doc-btn-mock">🔍 Zoom 100%</span>
+                    </div>
+                </div>
+                <div class="doc-workspace">
+                    <div class="doc-page">
+                        <div class="doc-header-meta">
+                            <span>VNU-UET | Khoa CNTT</span>
+                            <span>Bài thực hành 6</span>
+                        </div>
+                        <h1 style="text-align:center; margin-bottom: 1.5rem;">BÁO CÁO: SỬ DỤNG TRÍ TUỆ NHÂN TẠO CÓ TRÁCH NHIỆM TRONG HỌC TẬP</h1>
+                        
+                        <div class="doc-metadata-card">
+                            <div class="doc-metadata-item"><strong>Học phần:</strong> Nhập môn Công nghệ số (VNU1001)</div>
+                            <div class="doc-metadata-item"><strong>Sinh viên thực hiện:</strong> Trần Đăng Khoa</div>
+                            <div class="doc-metadata-item"><strong>Mã sinh viên:</strong> 25020226</div>
+                            <div class="doc-metadata-item"><strong>Lớp khóa học:</strong> IT1 K70</div>
+                            <div class="doc-metadata-item"><strong>Trạng thái nộp:</strong> Hoàn thành (10/10 điểm)</div>
+                            <div class="doc-metadata-item"><strong>Ngày thực hiện:</strong> 07/06/2026</div>
+                        </div>
+
+                        <div class="doc-toc">
+                            <div class="doc-toc-title">Mục lục tài liệu</div>
+                            <ul class="doc-toc-list">
+                                <li class="doc-toc-item"><span>I. Nghiên cứu chính sách học thuật về AI của nhà trường</span><span>Trang 1</span></li>
+                                <li class="doc-toc-item"><span>II. Đồ họa thông tin "Quy trình sử dụng AI trách nhiệm chuẩn học thuật"</span><span>Trang 2</span></li>
+                                <li class="doc-toc-item"><span>III. Bộ 6 nguyên tắc liêm chính học thuật cá nhân trên không gian số</span><span>Trang 3</span></li>
+                            </ul>
+                        </div>
+                        
+                        <h2>I. Nghiên cứu chính sách trường đại học</h2>
+                        <p>Chính sách sử dụng các công cụ AI tạo sinh của Trường Đại học Công nghệ (UET) được quản lý dựa trên: Khuyến khích đổi mới đi kèm tự chịu trách nhiệm; Quy định minh bạch (bắt buộc trích dẫn nguồn AI); Bảo mật thông tin nghiên cứu nội bộ học thuật.</p>
+
+                        <h2>II. Đồ họa thông tin "Học tập thông minh - Sử dụng công nghệ tận tâm"</h2>
+                        <div class="infographic-wrapper">
+                            <div class="infographic-grid">
+                                <div class="info-col green-col">
+                                    <div class="info-col-header">✓ ĐƯỢC PHÉP LÀM</div>
+                                    <ul class="info-list">
+                                        <li>Lên ý tưởng sáng tạo bài báo cáo.</li>
+                                        <li>Tìm kiếm từ khóa học thuật.</li>
+                                        <li>Rà soát lỗi chính tả và ngữ pháp.</li>
+                                        <li>Giải thích các khái niệm trừu tượng.</li>
+                                    </ul>
+                                </div>
+                                <div class="info-col red-col">
+                                    <div class="info-col-header">✗ TUYỆT ĐỐI TRÁNH</div>
+                                    <ul class="info-list">
+                                        <li>Yêu cầu AI viết hộ toàn bộ bài luận.</li>
+                                        <li>Sao chép số liệu AI mà không kiểm chứng.</li>
+                                        <li>Chép dán nguyên văn không trích dẫn.</li>
+                                        <li>Tiết lộ dữ liệu nghiên cứu bảo mật.</li>
+                                    </ul>
+                                </div>
+                                <div class="info-col purple-col">
+                                    <div class="info-col-header">➔ QUY TRÌNH CHUẨN</div>
+                                    <ul class="info-list">
+                                        <li><strong>Bước 1:</strong> Tự tư duy ý tưởng lõi bài làm.</li>
+                                        <li><strong>Bước 2:</strong> Dùng AI gợi ý thông tin nền.</li>
+                                        <li><strong>Bước 3:</strong> Đối chiếu và viết bằng lời văn cá nhân.</li>
+                                        <li><strong>Bước 4:</strong> Đóng gói và ghi rõ trích dẫn AI.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="infographic-footer">
+                                "Công nghệ giúp chúng ta đi nhanh hơn, nhưng chính sự trung thực quyết định chúng ta đi được bao xa."
+                            </div>
+                        </div>
+
+                        <h2>III. Bộ 6 nguyên tắc liêm chính học thuật cá nhân</h2>
+                        <div class="principles-grid">
+                            <div class="principle-card">
+                                <span class="principle-num">01</span>
+                                <span class="principle-title">Định hướng, không thay thế</span>
+                                <p class="principle-desc">Chỉ dùng AI hỗ trợ gợi ý ý tưởng ban đầu, tự viết nội dung chính của bài tập.</p>
+                            </div>
+                            <div class="principle-card">
+                                <span class="principle-num">02</span>
+                                <span class="principle-title">Đa nguồn kiểm chứng</span>
+                                <p class="principle-desc">Mọi số liệu do AI cung cấp bắt buộc phải được kiểm tra chéo với ít nhất hai tài liệu chính thống.</p>
+                            </div>
+                            <div class="principle-card">
+                                <span class="principle-num">03</span>
+                                <span class="principle-title">Tự hào minh bạch</span>
+                                <p class="principle-desc">Luôn công khai mức độ và phương pháp sử dụng công cụ AI ở cuối tài liệu.</p>
+                            </div>
+                            <div class="principle-card">
+                                <span class="principle-num">04</span>
+                                <span class="principle-title">Bảo vệ sự riêng tư</span>
+                                <p class="principle-desc">Không nhập dữ liệu nghiên cứu chưa công bố, thông tin cá nhân lên hệ thống AI công cộng.</p>
+                            </div>
+                            <div class="principle-card">
+                                <span class="principle-num">05</span>
+                                <span class="principle-title">Duy trì tư duy phản biện</span>
+                                <p class="principle-desc">Luôn hoài nghi lành mạnh trước mọi câu trả lời của hệ thống, không mặc định AI luôn đúng.</p>
+                            </div>
+                            <div class="principle-card">
+                                <span class="principle-num">06</span>
+                                <span class="principle-title">Tự chịu trách nhiệm</span>
+                                <p class="principle-desc">Tự chịu trách nhiệm hoàn toàn về độ chính xác và tính liêm chính của sản phẩm nộp lại.</p>
+                            </div>
+                        </div>
+
+                        <div class="doc-signature-block">
+                            <span>Ký xác nhận liêm chính học thuật</span>
+                            <span style="font-weight: 700; color: #10b981;"><i class="fa-solid fa-circle-check"></i> Đã ký số sinh viên Trần Đăng Khoa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Media Lightbox Modal -->
+    <div class="lightbox-modal" id="lightbox">
+        <div class="lightbox-content-wrapper">
+            <span class="lightbox-close" id="lightbox-close">&times;</span>
+            <img class="lightbox-img" id="lightbox-img" src="" alt="Phóng to ảnh minh chứng">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Scroll Top Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Cuộn lên đầu trang">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- AOS (Animate On Scroll) Library JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Main JS file -->
+    <script src="index.js"></script>
+
+</body>
+</html>
