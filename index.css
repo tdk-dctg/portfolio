@@ -3833,6 +3833,12 @@ body:not(.light-theme) .pdf-viewer .doc-workspace {
    =========================================
 */
 @media print {
+    /* Ép buộc trình duyệt giữ nguyên toàn bộ màu nền, màu chữ và đồ họa trên bản in/PDF */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
     :root {
         --bg-main: #ffffff !important;
         --text-primary: #0f172a !important;
